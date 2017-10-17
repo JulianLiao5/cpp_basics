@@ -8,6 +8,7 @@
 #include<iostream>
 
 #include <chrono>
+#include <thread>
 
 using namespace std;
 
@@ -16,11 +17,13 @@ using namespace std;
 int main(int argc, char *argv[]) {
     using namespace std::chrono;
 
+    std::cout<<"*****************test_case_1****************"<<std::endl;
+
     high_resolution_clock::time_point t1 = high_resolution_clock::now();
 
     std::cout << "printing out 1000 stars...\n";
     for(int i=0; i< 1000;i++) {
-        std::cout<<"*";
+        std::cout<<"+";
     }
     std::cout<<std::endl;
 
@@ -30,5 +33,12 @@ int main(int argc, char *argv[]) {
 
     std::cout<<"It took me "<<time_span.count()<<" seconds."<<std::endl;
 
+    std::cout<<"*****************test_case_2****************"<<std::endl;
+    high_resolution_clock::time_point start = high_resolution_clock::now();
+    std::this_thread::sleep_for(std::chrono::seconds(2));
+    high_resolution_clock::time_point end = high_resolution_clock::now();
+
+    std::chrono::duration<double, std::milli> elapsed = end - start;
+    std::cout << "Waited [" << elapsed.count() << "]ms" << std::endl;
     return 0;
 }

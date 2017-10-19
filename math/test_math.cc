@@ -17,8 +17,16 @@ int main(int argc, char *argv[]) {
     printf("The arc tangent of %f is %f\n", param, result);
 
     std::cout << "****************test case 3(atan2 test)**********" << std::endl;
-    double deltaX = -10.0, deltaY = 10.0;
+    double deltaX = -10.0, deltaY = -10.0;
     double result2;
+    result2 = atan2(deltaY, deltaX) * 180 / PI;
+    printf("The arc tangent for (%f, %f) is %f\n", deltaX, deltaY, result2);
+
+    deltaX = 10.0, deltaY = -10.0;
+    result2 = atan2(deltaY, deltaX) * 180 / PI;
+    printf("The arc tangent for (%f, %f) is %f\n", deltaX, deltaY, result2);
+
+    deltaX = -10.0, deltaY = 10.0;
     result2 = atan2(deltaY, deltaX) * 180 / PI;
     printf("The arc tangent for (%f, %f) is %f\n", deltaX, deltaY, result2);
 

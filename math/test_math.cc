@@ -5,7 +5,7 @@
 
 int main(int argc, char *argv[]) {
 
-    std::cout << "****************test case 1**********" << std::endl;
+    std::cout << "****************test case 1(tan test)**********" << std::endl;
     double tan_70d;
     tan_70d = tan((70 * PI)/180);
     printf("tan_70d: %f\n", tan_70d);
@@ -33,4 +33,18 @@ int main(int argc, char *argv[]) {
     deltaX = 1.0, deltaY = 2.747477;
     result2 = atan2(deltaY, deltaX) * 180 / PI;
     printf("The arc tangent for (%f, %f) is %f\n", deltaX, deltaY, result2);
+
+    std::cout << "****************test case 3(sqrt test)**********" << std::endl;
+    double sqrt_param, sqrt_result;
+    sqrt_param = 1024.0;
+    sqrt_result = sqrt(sqrt_param);
+    printf("sqrt(%f) = %f\n", sqrt_param, sqrt_result);
+
+    sqrt_param = 9.0;
+    sqrt_result = sqrt(sqrt_param);
+    printf("sqrt(%f) = %f\n", sqrt_param, sqrt_result);
+
+    sqrt_param = 16.0;
+    sqrt_result = sqrt(sqrt_param);
+    printf("sqrt(%f) = %f\n", sqrt_param, sqrt_result);
 }

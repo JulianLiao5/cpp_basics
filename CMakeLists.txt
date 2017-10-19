@@ -6,3 +6,6 @@ add_executable(test_condition_variable test_condition_variable.cpp)
 target_link_libraries(test_condition_variable pthread)
 
 add_executable(test_high_resolution_clock test_high_resolution_clock.cpp)
+
+set(SRC_MATH math/test_math.cc)
+add_executable(test_math ${SRC_MATH})

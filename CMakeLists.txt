@@ -9,3 +9,10 @@ add_executable(test_high_resolution_clock test_high_resolution_clock.cpp)
 
 set(SRC_MATH math/test_math.cc)
 add_executable(test_math ${SRC_MATH})
+
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+
+set(SRC_OPENCV opencv/test_opencv.cpp)
+add_executable(test_opencv ${SRC_OPENCV})
+target_link_libraries(test_opencv ${OpenCV_LIBS})

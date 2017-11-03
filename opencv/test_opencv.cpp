@@ -13,15 +13,18 @@
 using namespace std;
 using namespace cv;
 
+Mat src;
+
 Point2i VertexLeftTop(-1, -1);
 Point2i VertexRightDown(-1, -1);
 
 void onMouse(int Event, int x, int y, int flags, void* param);
+void onMouse2(int Event, int x, int y, int flags, void* param);
 
 int main(int argc, char *argv[]) {
-  Mat src = imread("../res/lena30.jpg", IMREAD_UNCHANGED);
+  src = imread("../res/lena30.jpg", IMREAD_UNCHANGED);
   namedWindow("image", WINDOW_NORMAL);
-  setMouseCallback("image", onMouse, NULL);
+  setMouseCallback("image", onMouse2, NULL);
 
     while(true) {
         if(VertexLeftTop.x == -1 && VertexRightDown.x == -1) {
@@ -52,5 +55,12 @@ void onMouse(int Event, int x, int y, int flags, void* param) {
       printf("22222222222222222\n");
       VertexRightDown.x = x;
       VertexRightDown.y = y;
+    }
+}
+
+void onMouse2(int Event, int x, int y, int flags, void* param) {
+    if(Event == CV_EVENT_LBUTTONDOWN) {
+      Point2i pt = Point2i(x, y);
+      circle(src, pt, 2, Scalar(0, 255, 0), 10, 8, 0);
     }
 }

@@ -7,6 +7,9 @@ target_link_libraries(test_condition_variable pthread)
 
 add_executable(test_high_resolution_clock test_high_resolution_clock.cpp)
 
+set(SRC_DATA_STRUCT data_struct/test_data_struct.cc)
+add_executable(test_data_struct ${SRC_DATA_STRUCT})
+
 set(SRC_MATH math/test_math.cc)
 add_executable(test_math ${SRC_MATH})
 

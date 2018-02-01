@@ -19,3 +19,6 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 set(SRC_OPENCV opencv/test_opencv.cpp)
 add_executable(test_opencv ${SRC_OPENCV})
 target_link_libraries(test_opencv ${OpenCV_LIBS})
+
+add_executable(test_try_lock mutex/test_try_lock.cpp)
+target_link_libraries(test_try_lock pthread)

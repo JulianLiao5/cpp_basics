@@ -10,6 +10,8 @@ add_executable(test_high_resolution_clock test_high_resolution_clock.cpp)
 set(SRC_DATA_STRUCT data_struct/test_data_struct.cc)
 add_executable(test_data_struct ${SRC_DATA_STRUCT})
 
+add_executable(test_vector data_struct/test_vector.cc)
+
 set(SRC_MATH math/test_math.cc)
 add_executable(test_math ${SRC_MATH})
 
@@ -19,3 +21,6 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 set(SRC_OPENCV opencv/test_opencv.cpp)
 add_executable(test_opencv ${SRC_OPENCV})
 target_link_libraries(test_opencv ${OpenCV_LIBS})
+
+add_executable(calc_euclidean_dist opencv/calc_euclidean_dist.cpp)
+target_link_libraries(calc_euclidean_dist ${OpenCV_LIBS})

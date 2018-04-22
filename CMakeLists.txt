@@ -11,6 +11,7 @@ set(SRC_DATA_STRUCT data_struct/test_data_struct.cc)
 add_executable(test_data_struct ${SRC_DATA_STRUCT})
 
 add_executable(test_vector data_struct/test_vector.cc)
+add_executable(test_vector_insert data_struct/test_vector_insert.cc)
 
 set(SRC_MATH math/test_math.cc)
 add_executable(test_math ${SRC_MATH})
@@ -24,3 +25,5 @@ target_link_libraries(test_opencv ${OpenCV_LIBS})
 
 add_executable(calc_euclidean_dist opencv/calc_euclidean_dist.cpp)
 target_link_libraries(calc_euclidean_dist ${OpenCV_LIBS})
+add_executable(test_try_lock mutex/test_try_lock.cpp)
+target_link_libraries(test_try_lock pthread)

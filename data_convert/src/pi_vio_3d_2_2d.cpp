@@ -34,6 +34,8 @@ double NormalizeAngle(const double angle) {
     return normalized_angle;
 }
 
+
+// for PIVIO and msckf, the rule is different.
 int main(int argc, char ** argv) {
     if (argc < 2) {
       cout << "Usage: ./converter_pi_3d_2_2d pose_3d.txt" << endl;
@@ -59,9 +61,13 @@ int main(int argc, char ** argv) {
         Eigen::Quaterniond q(value[7], value[4], value[5], value[6]);
         Eigen::Vector3d euler = q.toRotationMatrix().eulerAngles(0, 1, 2);
 
-
-        pose_2d_file << std::to_string(value[0]) << " " << value[3] << " " << ((-1.0) * (value[1]))
+        // for msckf
+        pose_2d_file << std::to_string(value[0]) << " " << value[2] << " " << ((-1.0) * (value[1]))
             << " " << NormalizeAngle((euler(1) + M_PI)) << endl;
+
+        // for PIVIO
+        //pose_2d_file << std::to_string(value[0]) << " " << value[3] << " " << ((-1.0) * (value[1]))
+        //    << " " << NormalizeAngle((euler(1) + M_PI)) << endl;
     }
     pose_2d_file.close();
 

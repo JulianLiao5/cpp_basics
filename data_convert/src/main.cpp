@@ -68,7 +68,7 @@ int main(int argc, char *argv[])
   
     float value[6] = {0};
   
-    sscanf(buffer, "%f,%f,%f,%f,%f,%f", &value[0],&value[1],&value[2],&value[3],&value[4],&vaue[5]);
+    sscanf(buffer, "%f,%f,%f,%f,%f,%f", &value[0],&value[1],&value[2],&value[3],&value[4],&value[5]);
   
     double lat = value[1];
     double lon = value[2];
@@ -86,7 +86,7 @@ int main(int argc, char *argv[])
     x = utm.x - OFFSETX;
     y = utm.y - OFFSETY;
 
-    gps_2d_File << std::to_string(value[0]) << " " << x << " " << y << " " << NormalizeAngle(DEG2RAD(value[4])) << DEG2RAD(vaue[5]) << endl;
+    gps_2d_File << std::to_string(value[0]) << " " << x << " " << y << " " << NormalizeAngle(DEG2RAD(value[4])) << DEG2RAD(value[5]) << endl;
 
     Point points;
 //    points.x = (x + 600);

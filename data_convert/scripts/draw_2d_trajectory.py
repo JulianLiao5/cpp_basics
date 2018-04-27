@@ -93,6 +93,7 @@ def main(filenames):
         }
     plt.text(-60, 80, "Overall:" + "\n" + "    min: 0.000503" + "\n" + "    max: 5.511186" + "\n" + "    rms: 0.475902", fontdict=font)
     plt.title('2D x-y trajectory')
+    plt.gca().set_aspect('equal', adjustable='box')
     plt.figure(2)
     plt.xlabel('timestamp[ms]')
     plt.ylabel('heading [deg]')

@@ -66,9 +66,9 @@ int main(int argc, char *argv[])
   while (!feof(fp)) {
     fgets(buffer, 100, fp);
   
-    float value[6] = {0};
+    double value[6] = {0};
   
-    sscanf(buffer, "%f,%f,%f,%f,%f,%f", &value[0],&value[1],&value[2],&value[3],&value[4],&value[5]);
+    sscanf(buffer, "%lf,%lf,%lf,%lf,%lf,%lf", &value[0],&value[1],&value[2],&value[3],&value[4],&value[5]);
   
     double lat = value[1];
     double lon = value[2];
@@ -79,7 +79,7 @@ int main(int argc, char *argv[])
     if(1 == flag) {
        OFFSETX = utm.x;
        OFFSETY = utm.y;
-       printf("**************OFFSETX: %f, OFFSETY: %f\n", OFFSETX, OFFSETY);
+       printf("**************OFFSETX: %lf, OFFSETY: %lf\n", OFFSETX, OFFSETY);
        flag = 0;
     }
   

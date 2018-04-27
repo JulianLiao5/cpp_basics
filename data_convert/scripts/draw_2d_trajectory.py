@@ -24,6 +24,8 @@ def load_trajectory_with_file(filename, need_transfer, init_th):
     if need_transfer:
         x = [((-1.0) * ((vec[1] * math.cos(WEST - init_th - MAG_OFFSET)) - X_VIO_T_NED)) for vec in m]
         y = [((-1.0) * ((vec[2] * math.cos(WEST - init_th - MAG_OFFSET)) - Y_VIO_T_NED)) for vec in m]
+        # x = [((-1.0) * (vec[1] - X_VIO_T_NED)) for vec in m]
+        # y = [((-1.0) * (vec[2] - Y_VIO_T_NED)) for vec in m]
         theta = [(init_th - vec[3]) for vec in m]
         t = [vec[0] for vec in m]
     else:
@@ -84,6 +86,12 @@ def main(filenames):
     plt.legend(filenames)
     plt.xlabel('x[m]')
     plt.ylabel('y[m]')
+    font = {'family': 'serif',
+        'color':  'darkred',
+        'weight': 'normal',
+        'size': 16,
+        }
+    plt.text(-60, 80, "Overall:" + "\n" + "    min: 0.000503" + "\n" + "    max: 5.511186" + "\n" + "    rms: 0.475902", fontdict=font)
     plt.title('2D x-y trajectory')
     plt.figure(2)
     plt.xlabel('timestamp[ms]')

@@ -63,7 +63,7 @@ int main(int argc, char ** argv) {
 
         // for msckf
         pose_2d_file << std::to_string(value[0]) << " " << value[2] << " " << ((-1.0) * (value[1]))
-            << " " << NormalizeAngle((euler(1) + M_PI)) << endl;
+            << " " << NormalizeAngle((euler(2))) << endl;
 
         // for PIVIO
         //pose_2d_file << std::to_string(value[0]) << " " << value[3] << " " << ((-1.0) * (value[1]))

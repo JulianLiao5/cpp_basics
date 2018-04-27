@@ -9,15 +9,21 @@ import math
 
 COLORS = ['-b', '-r', '-g', '-m', '-c']
 RAD2DEG = 180 / math.pi
-WEST = (270 / 180) * math.pi
+WEST = (270 * math.pi/ 180)
+MAG_OFFSET = (0 * math.pi/ 180)
+
+MAG_LEN = 30
+
+# X_VIO_T_NED = -0.02
+# Y_VIO_T_NED = 0.165
 X_VIO_T_NED = -0.02
 Y_VIO_T_NED = 0.165
 
 def load_trajectory_with_file(filename, need_transfer, init_th):
     m = np.loadtxt(filename, delimiter=" ")
     if need_transfer:
-        x = [((vec[1] * math.cos(WEST - init_th)) - X_VIO_T_NED) for vec in m]
-        y = [((vec[2] * math.cos(WEST - init_th)) - Y_VIO_T_NED) for vec in m]
+        x = [((-1.0) * ((vec[1] * math.cos(WEST - init_th - MAG_OFFSET)) - X_VIO_T_NED)) for vec in m]
+        y = [((-1.0) * ((vec[2] * math.cos(WEST - init_th - MAG_OFFSET)) - Y_VIO_T_NED)) for vec in m]
         theta = [(init_th - vec[3]) for vec in m]
         t = [vec[0] for vec in m]
     else:
@@ -35,20 +41,24 @@ def main(filenames):
     assert len(filenames) <= len(COLORS)
 
     mpl.rcParams['legend.fontsize'] = 10
+    gps_init_th = 0
     for i in range(0, len(filenames)):
         name = filenames[i]
         if i == 0:
             m = np.loadtxt(name, delimiter=" ")
-            init_th = m[3][0];
+            gps_heading_mag = [vec[4] for vec in m]
+            for k in range(0, MAG_LEN):
+                gps_init_th = gps_init_th + gps_heading_mag[k]
+            gps_init_th = gps_init_th / MAG_LEN
 
-            try:
-                if i == 0:
-                    x, y, t, theta = load_trajectory_with_file(name, false, init_th)
-                else:
-                    x, y, t, theta = load_trajectory_with_file(name, true, init_th)
-            except IOError:
-                print "Failed to load file [" + name + "]. :("
-                sys.exit(-1)
+        try:
+            if i == 0:
+                x, y, t, theta = load_trajectory_with_file(name, False, gps_init_th)
+            else:
+                x, y, t, theta = load_trajectory_with_file(name, True, gps_init_th)
+        except IOError:
+            print "Failed to load file [" + name + "]. :("
+            sys.exit(-1)
 
         if i == 0:
             j = 0

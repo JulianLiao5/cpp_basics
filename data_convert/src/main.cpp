@@ -23,9 +23,9 @@ using namespace cv;
 
 #define DEG2RAD(x) ((x / 180.0) * M_PI)
 
-ofstream utmFile;
-// ofstream fix_coorFile;
-// ofstream float_coorFile;
+// ofstream utmFile;
+ofstream fix_coorFile;
+ofstream float_coorFile;
 ofstream gps_2d_File;
 
 double NormalizeAngle(const double angle) {
@@ -57,9 +57,9 @@ int main(int argc, char *argv[])
   double OFFSETX;
   double OFFSETY;
 
-  utmFile.open("./utm_data.txt", ios::out);
-  // fix_coorFile.open("./fix_coor.txt", ios::out);
-  // float_coorFile.open("./float_coor.txt", ios::out);
+  // utmFile.open("./utm_data.txt", ios::out);
+  fix_coorFile.open("./fix_coor.txt", ios::out);
+  float_coorFile.open("./float_coor.txt", ios::out);
   gps_2d_File.open("./gps_pose_2d.csv", ios::out);
 
   // tow(sec),latitude(degrees),longitude(degrees),flags,heading_data(degree),heading_mag(degree)
@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
     double lat = value[1];
     double lon = value[2];
     LatLonToUTMXY(lat, lon, 0, &utm);
-    utmFile << utm.x << " " << utm.y << endl;
+    // utmFile << utm.x << " " << utm.y << endl;
   
     static int flag =1;
     if(1 == flag) {
@@ -93,15 +93,15 @@ int main(int argc, char *argv[])
     points.y = (-y + 300);
 
     if(4 == value[3]) {
-      if (std::abs(x) < 20000.0 && std::abs(y) < 20000.0) {
-        gps_2d_File << std::to_string(value[0]) << " " << x << " " << y << " " << DEG2RAD(value[4]) << DEG2RAD(value[5]) << endl;
-        // fix_coorFile << x << "  " << y << std::endl;
+      //if (std::abs(x) < 20000.0 && std::abs(y) < 20000.0) {
+        gps_2d_File << std::to_string(value[0]) << " " << x << " " << y << " " << DEG2RAD(value[4]) << " " << DEG2RAD(value[5]) << endl;
+        fix_coorFile << x << "  " << y << std::endl;
         circle(image, points, 1, Scalar(255,0,0));
-      }
+      // }
     } else if(3 == value[3]) {
       //if (std::abs(x) < 20000.0 && std::abs(y) < 20000.0) {
       gps_2d_File << std::to_string(value[0]) << " " << x << " " << y << " " << DEG2RAD(value[4]) << DEG2RAD(value[5]) << endl;
-      // float_coorFile << x << "  " << y << std::endl;
+      float_coorFile << x << "  " << y << std::endl;
       circle(image, points, 1, Scalar(0,0,255));
       //}
     } else if(0 == value[3]) {
@@ -120,9 +120,9 @@ int main(int argc, char *argv[])
     }
   } // end 'while (!feof(fp))'
 
-  utmFile.close();
-  // fix_coorFile.close();
-  // float_coorFile.close();
+  // utmFile.close();
+  fix_coorFile.close();
+  float_coorFile.close();
   gps_2d_File.close();
 
   cout << "\nthe end" << endl;

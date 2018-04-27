@@ -94,13 +94,15 @@ int main(int argc, char *argv[])
 
     if(4 == value[3]) {
       //if (std::abs(x) < 20000.0 && std::abs(y) < 20000.0) {
-        gps_2d_File << std::to_string(value[0]) << " " << x << " " << y << " " << DEG2RAD(value[4]) << " " << DEG2RAD(value[5]) << endl;
+        gps_2d_File << std::to_string(value[0]) << " " << x << " " << y << " " << DEG2RAD(value[4]) << " " << DEG2RAD(value[5])
+            << " " << value[3] << endl;
         fix_coorFile << x << "  " << y << std::endl;
         circle(image, points, 1, Scalar(255,0,0));
       // }
     } else if(3 == value[3]) {
       //if (std::abs(x) < 20000.0 && std::abs(y) < 20000.0) {
-      gps_2d_File << std::to_string(value[0]) << " " << x << " " << y << " " << DEG2RAD(value[4]) << DEG2RAD(value[5]) << endl;
+      gps_2d_File << std::to_string(value[0]) << " " << x << " " << y << " " << DEG2RAD(value[4]) << " " << DEG2RAD(value[5])
+           << " " << value[3] << endl;
       float_coorFile << x << "  " << y << std::endl;
       circle(image, points, 1, Scalar(0,0,255));
       //}

@@ -7,7 +7,11 @@ import os
 import subprocess
 import math
 
-COLORS = ['-b', '-r', '-g', '-m', '-c']
+GPS_FIX = 4
+GPS_FLOAT = 3
+COLOR_FIX = '-b'
+COLOR_FLOAT = '-r'
+COLORS = ['-y', '-g', '-k', '-m', '-c']
 RAD2DEG = 180 / math.pi
 WEST = (270 * math.pi/ 180)
 MAG_OFFSET = (0 * math.pi/ 180)
@@ -19,23 +23,27 @@ MAG_LEN = 30
 X_VIO_T_NED = -0.02
 Y_VIO_T_NED = 0.165
 
-def load_trajectory_with_file(filename, need_transfer, init_th):
+def load_gps_trajectory_with_file(filename):
     m = np.loadtxt(filename, delimiter=" ")
-    if need_transfer:
-        x = [((-1.0) * ((vec[1] * math.cos(WEST - init_th - MAG_OFFSET)) - X_VIO_T_NED)) for vec in m]
-        y = [((-1.0) * ((vec[2] * math.cos(WEST - init_th - MAG_OFFSET)) - Y_VIO_T_NED)) for vec in m]
-        # x = [((-1.0) * (vec[1] - X_VIO_T_NED)) for vec in m]
-        # y = [((-1.0) * (vec[2] - Y_VIO_T_NED)) for vec in m]
-        theta = [(init_th - vec[3]) for vec in m]
-        t = [vec[0] for vec in m]
-    else:
-        x = [vec[1] for vec in m]
-        y = [vec[2] for vec in m]
-        # reverse haier theta to positive in order to compare
-        theta = [vec[3] for vec in m]
-        t = [vec[0] for vec in m]
-    return x, y, t, theta
+    flag = [vec[5] for vec in m]
+    x_gps_fix = [vec[1] for vec in m if vec[5] == GPS_FIX]
+    y_gps_fix = [vec[2] for vec in m if vec[5] == GPS_FIX]
+    x_gps_float = [vec[1] for vec in m if vec[5] == GPS_FLOAT]
+    y_gps_float = [vec[2] for vec in m if vec[5] == GPS_FLOAT]
+    # reverse haier theta to positive in order to compare
+    theta = [vec[3] for vec in m]
+    t = [vec[0] for vec in m]
+    return x_gps_fix, y_gps_fix, x_gps_float, y_gps_float, t, theta
 
+def load_vio_trajectory_with_file(filename, init_th):
+    m = np.loadtxt(filename, delimiter=" ")
+    # x = [((-1.0) * ((vec[1] * math.cos(WEST - init_th - MAG_OFFSET)) - X_VIO_T_NED)) for vec in m]
+    # y = [((-1.0) * ((vec[2] * math.cos(WEST - init_th - MAG_OFFSET)) - Y_VIO_T_NED)) for vec in m]
+    x = [((-1.0) * (vec[1] - X_VIO_T_NED)) for vec in m]
+    y = [((-1.0) * (vec[2] - Y_VIO_T_NED)) for vec in m]
+    theta = [(init_th - vec[3]) for vec in m]
+    t = [vec[0] for vec in m]
+    return x, y, t, theta
 
 def main(filenames):
     assert isinstance(filenames, list)
@@ -52,12 +60,13 @@ def main(filenames):
             for k in range(0, MAG_LEN):
                 gps_init_th = gps_init_th + gps_heading_mag[k]
             gps_init_th = gps_init_th / MAG_LEN
+            print gps_init_th
 
         try:
             if i == 0:
-                x, y, t, theta = load_trajectory_with_file(name, False, gps_init_th)
+                x_gps_fix, y_gps_fix, x_gps_float, y_gps_float, t, theta = load_gps_trajectory_with_file(name)
             else:
-                x, y, t, theta = load_trajectory_with_file(name, True, gps_init_th)
+                x, y, t, theta = load_vio_trajectory_with_file(name, gps_init_th)
         except IOError:
             print "Failed to load file [" + name + "]. :("
             sys.exit(-1)
@@ -78,12 +87,19 @@ def main(filenames):
                 theta[j] = theta[j] * RAD2DEG
                 j = j + 1
         plt.figure(1)
-        plt.plot(x, y, COLORS[i])
+        if i == 0:
+            plt.plot(x_gps_fix, y_gps_fix, COLOR_FIX)
+            plt.plot(x_gps_float, y_gps_float, COLOR_FLOAT)
+        else:
+            plt.plot(x, y, COLORS[i])
         plt.figure(2)
         plt.plot(t, theta, COLORS[i])
         print "plotting " + name
     plt.figure(1)
-    plt.legend(filenames)
+    if i == 0:
+        plt.legend(filenames[0])
+    else:
+        plt.legend(filenames)
     plt.xlabel('x[m]')
     plt.ylabel('y[m]')
     font = {'family': 'serif',

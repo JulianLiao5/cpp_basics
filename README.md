@@ -8,7 +8,7 @@ cpp examples for basic programming
                 heading_data: [0, 2pi)
                 heading_mag: [0, 2pi)
 
-    gps_pose_2d_0425_1845.csv
-        1_tow(sec),2_x(meters),3_y(meters),4_heading_data(radian),5_heading_mag(radian)
+    final_gps_pose_2d_0426_1815.csv
+        1_tow(sec),2_x(meters),3_y(meters),4_heading_data(radian),5_heading_mag(radian),6_flags
                 heading_data: [0, 2pi)
                 heading_mag: [0, 2pi)

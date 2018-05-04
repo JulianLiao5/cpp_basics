@@ -6,9 +6,14 @@
 int main(int argc, char *argv[]) {
 
     std::cout << "****************test case 1(sin test)**********" << std::endl;
-    double cos_30d;
-    cos_30d = cos((30 * PI)/180);
-    printf("cos_30d: %f\n", cos_30d);
+    double sin_270d;
+    sin_270d = sin((270 * PI)/180);
+    printf("sin_270d: %f\n", sin_270d);
+
+    std::cout << "****************test case 1(cos test)**********" << std::endl;
+    double cos_270d;
+    cos_270d = cos((270 * PI)/180);
+    printf("cos_270d: %f\n", cos_270d);
 
     std::cout << "****************test case 2(atan test)**********" << std::endl;
     double param, result;

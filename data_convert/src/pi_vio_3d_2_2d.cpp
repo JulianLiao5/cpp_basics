@@ -53,7 +53,7 @@ int main(int argc, char ** argv) {
     while (!feof(pose_3d_fp)) {
         fgets(buffer, 1024, pose_3d_fp);
 
-        double value[8] = {0};
+/*        double value[8] = {0};
 
         sscanf(buffer, "%lf %lf %lf %lf %lf %lf %lf %lf", &value[0], &value[1], &value[2], &value[3],
               &value[4], &value[5], &value[6], &value[7]);
@@ -63,7 +63,14 @@ int main(int argc, char ** argv) {
 
         // for msckf
         pose_2d_file << std::to_string(value[0]) << " " << value[2] << " " << ((-1.0) * (value[1]))
-            << " " << NormalizeAngle((euler(2))) << endl;
+            << " " << NormalizeAngle((euler(2))) << endl;*/
+
+        double value[3] = {0};
+
+        sscanf(buffer, "%lf,%lf,%lf", &value[0], &value[1], &value[2]);
+
+        // for msckf
+        pose_2d_file << std::to_string(value[0]) << " " << value[2] << " " << ((-1.0) * (value[1])) << endl;
 
         // for PIVIO
         //pose_2d_file << std::to_string(value[0]) << " " << value[3] << " " << ((-1.0) * (value[1]))

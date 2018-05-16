@@ -7,10 +7,11 @@ import sys
 
 
 def main(filename):
-    m = np.loadtxt(filename, delimiter=" ")
     if "CameraTrajectory" in filename:
+        m = np.loadtxt(filename, delimiter=" ")
         timestamp = [(vec[0] * 1000.0) for vec in m]
     elif "gps" in filename:
+        m = np.loadtxt(filename, delimiter=",")
         timestamp = [vec[0] for vec in m]
         tow = [vec[1] for vec in m]
 

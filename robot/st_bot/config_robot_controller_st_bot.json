@@ -1,0 +1,122 @@
+{
+  "clean_planning_actor": {
+    "robot_commander": "clean_robot_commander",
+    "planner": "clean_planner",
+    "status_map": "clean_status_map"
+  },
+  "robot_driver": {
+    "type": "st_bot",
+    "serial_name": "\/dev\/ttyUSB0"
+  },
+  "sensor_reader": {
+    "sensor_interface": "PerceptInV2Interface",
+    "interface_mode": "slam_friendly_data"
+  },
+  "clean_planner": {
+    "goal": "0.0,0.0",
+    "type": "clean_planner"
+  },
+  "explore_planning_actor": {
+    "robot_commander": "explore_robot_commander",
+    "planner": "explore_planner",
+    "status_map": "status_map"
+  },
+  "range_mapper": "",
+  "wheel_fuser": {
+    "fusion_filter_type": "gyro_tricycle_wheel_fusion_filter"
+  },
+  "log_writer": {
+    "Directory": "\/tmp\/bot_data_"
+  },
+  "clean_robot_commander": {
+    "theta_thresh": "0.02",
+    "type": "clean_robot_commander",
+    "move_speed": "0.15",
+    "turn_speed": "0.5",
+    "dis_thresh": "0.03"
+  },
+  "explore_planner": {
+    "type": "snake_planner"
+  },
+  "explore_robot_commander": {
+    "theta_thresh": "0.01",
+    "type": "snake_robot_commander",
+    "move_speed": "0.15",
+    "turn_speed": "0.8",
+    "dis_thresh": "0.03",
+    "back_distace": 0.05,
+    "move_step": 0.05,
+    "barrier_collision_check_radius": 0.05,
+    "barrier_window_size": 5
+  },
+  "feature_actor": {
+    "shared_feature_detector": "feature_detector",
+    "undistort_feature": "false",
+    "sensors": "stereo_left,stereo_right"
+  },
+  "image_manager": {
+    "_comments": "Defines the measurement manager that handles raw image data.",
+    "type": "basic_sparse_feature_manager",
+    "sensors": "stereo_left,stereo_right",
+    "_note1": "There are 2 ways to specify the feature detector(s). Use only one. For all sensors to share a single detector, specify shared_feature_detector. For each sensor to has its own detector, use XXX_feature_detector, where XXX is the name of the sensor.",
+    "shared_feature_detector": "feature_detector",
+    "_stereo_left_feature_detector": "feature_detector",
+    "_stereo_right_feature_detector": "feature_detector",
+    "_note2": "The following parameters are specifically for basic_sparse_feature_manager.",
+    "id_rig": "imu",
+    "use_temporal_information": true,
+    "min_tracking_state_health": 0.8,
+    "max_reprojection_error": 50.0,
+    "max_descriptor_matching_distance": 0.2,
+    "min_descriptor_matching_confidence": 1.25,
+    "descriptor_matcher": "descriptor_matcher"
+  },
+  "visual_gyro": {
+    "min_feature_distance": 1,
+    "min_feature_required": 5,
+    "pixel_noise_standard_deviation": 3,
+    "gyro_wideband_noise_standard_deviation": 5.305e-4,
+    "gyro_bias_driving_noise_standard_deviation": 1.3e-4,
+    "init_orientation_error_standard_deviation": 0.001745,
+    "init_gyro_bias_error_standard_deviation": 0.017453,
+    "static_update_threshold_angle": 0.0001745,
+    "least_square_maximum_norm_threshold": 0.001,
+    "use_stereo_camera": true,
+    "use_left_camera_features_only": false,
+    "max_number_least_square_iteration": 5
+  },
+  "feature_detector": {
+    "_comments": "Defines a feature detector.",
+    "_type": "good_feature_detector",
+    "type": "optical_flow_based_feature_detector",
+    "image_margin": 25,
+    "pyramid_level": 0,
+    "pyramid_scale_factor": 2.0,
+    "max_num_points": 240,
+    "quality_level": 0.02,
+    "min_distance": 5,
+    "num_bins": "8,6",
+    "optical_flow_search_window": "31,31",
+    "max_optical_flow_error": 3.0
+  },
+  "triangulator": {
+    "_comments": "Defines a triangulator.",
+    "type": "triangulator_with_dlt"
+  },
+  "obstacle_detector": {
+    "sensors": "stereo_left,stereo_right",
+    "obstacle_finder_type": "image_barrier_range_finder",
+    "num_bins": 11,
+    "bin_size": 0.28559933214,
+    "min_search_height": -500,
+    "max_search_height": 80
+  },
+  "block_matcher": {
+    "type": "large_block_matcher",
+    "inpaint_missing_vallue": false,
+    "cropping_left": 80,
+    "cropping_right": 80,
+    "cropping_top": 80,
+    "cropping_bottom": 0
+  }
+}

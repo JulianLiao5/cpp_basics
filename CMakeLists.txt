@@ -27,3 +27,9 @@ add_executable(calc_euclidean_dist opencv/calc_euclidean_dist.cpp)
 target_link_libraries(calc_euclidean_dist ${OpenCV_LIBS})
 add_executable(test_try_lock mutex/test_try_lock.cpp)
 target_link_libraries(test_try_lock pthread)
+
+add_executable(test_thread_id mutex/test_thread_id.cpp)
+target_link_libraries(test_thread_id pthread)
+
+add_executable(test_call_once mutex/test_call_once.cpp)
+target_link_libraries(test_call_once pthread)

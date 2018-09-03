@@ -21,6 +21,14 @@ int main(int argc, char *argv[]) {
     result = atan(param) * 180 / PI;
     printf("The arc tangent of %f is %f\n", param, result);
 
+    double param_2, result_2;
+    param_2 = 1.0 / 1.5;
+    result_2 = atan(param_2) * 180 / PI;
+    printf("The arc tangent of %f is %f\n", param_2, result_2);
+
+    double deg_3 = tan(result_2 * PI / 180);
+    printf("The tangent of %f is %f\n", result_2, deg_3);
+
     std::cout << "****************test case 3(atan2 test)**********" << std::endl;
     double deltaX = 0.1, deltaY = 0.05;
     double result2;

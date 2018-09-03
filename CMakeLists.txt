@@ -33,3 +33,8 @@ target_link_libraries(test_thread_id pthread)
 
 add_executable(test_call_once mutex/test_call_once.cpp)
 target_link_libraries(test_call_once pthread)
+
+# [BEGIN - file_stream]
+add_executable(test_fstream_mode file_stream/test_fstream_mode.cpp)
+target_link_libraries(test_fstream_mode pthread)
+# [END - file_stream]

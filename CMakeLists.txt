@@ -38,3 +38,7 @@ target_link_libraries(test_call_once pthread)
 add_executable(test_fstream_mode file_stream/test_fstream_mode.cpp)
 target_link_libraries(test_fstream_mode pthread)
 # [END - file_stream]
+
+# [BEGIN - functional]
+add_executable(test_bind functional/test_function_bind.cpp)
+# [END - functional]

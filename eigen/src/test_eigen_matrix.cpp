@@ -87,6 +87,7 @@ int main(int argc, char** argv) {
     cout << "To represent rotation, we need to normalize it such that its length is " << q.norm() << endl;
 
     Eigen::Vector3d v(1, 2, -1);
+    cout << "line: " << __LINE__ << "v.rows: " << v.rows() << ", v.cols: " << v.cols() << endl;
     Eigen::Quaterniond p;
     p.w() = 0;
     p.vec() = v;
@@ -107,7 +108,3 @@ int main(int argc, char** argv) {
 
     return 0;
 }
-
-
-
-

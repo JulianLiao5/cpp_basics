@@ -15,6 +15,14 @@ using namespace std;
 
 int main (int argc, char **argv) {
 
+
+  ofstream radar77File;
+  radar77File.open("./radar77_data.txt", ios::out);
+  // radar77File << "This is a test" << std::endl;
+  radar77File << "what is wrong!" << std::endl;
+  radar77File.close();
+
+
     std::fstream fs ("./test.txt", std::fstream::out | std::fstream::trunc);
 
   fs << 1;

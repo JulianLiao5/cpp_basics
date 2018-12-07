@@ -30,10 +30,10 @@ int main(int argc, char *argv[]) {
     printf("The cos of %f is %lf, distance: %lf\n", test_19_deg, cos_19, distance_19deg);
 ***/
 
-    double test_21_deg = 21.0;
-    double cos_21 = cos(test_21_deg * PI / 180);
-    double distance_21deg = 10 / cos_21;
-    printf("The cos of %f is %lf, distance: %lf\n", test_21_deg, cos_21, distance_21deg);
+    double test_24_deg = 24;
+    double cos_24 = cos(test_24_deg_deg * PI / 180);
+    double value = 6.1 / 6.7;
+    printf("The cos of %f is %lf, distance: %lf\n", test_24_deg, cos_24, value);
 
     double test_22_deg = 22.0;
     double cos_22 = cos(test_22_deg * PI / 180);

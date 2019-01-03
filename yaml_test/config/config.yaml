@@ -1,0 +1,10 @@
+vehicle:
+  #<!-- unit: meter -->
+  vehicle_length: 1.70
+  vehicle_width: 1.20
+
+#<!-- unit: in hex format -->
+controller_id: 0x790
+
+debug:
+  on: 0

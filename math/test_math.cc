@@ -3,74 +3,158 @@
 
 #define PI 3.14159265
 
+#define test_range 5.56
+
 int main(int argc, char *argv[]) {
-/***    double test_15_deg = 15.0;
-    double cos_15 = cos(test_15_deg * PI / 180);
-    double distance_15deg = 10 / cos_15;
-    printf("The cos of %f is %lf, distance: %lf\n", test_15_deg, cos_15, distance_15deg);
+    std::cout << "****************test case 2(atan test)**********" << std::endl;
+    double param_1, result_1;
+    param_1 = 2.13 / test_range;
+    result_1 = atan(param_1) * 180 / PI;
+    double range = test_range / cos (result_1 * PI / 180);
+    printf("line: %d, the arc tangent of %f is %f, range: %f\n", __LINE__, param_1, result_1, range);
 
-    double test_16_deg = 16.0;
-    double cos_16 = cos(test_16_deg * PI / 180);
-    double distance_16deg = 10 / cos_16;
-    printf("The cos of %f is %lf, distance: %lf\n", test_16_deg, cos_16, distance_16deg);
+    //double dbl_result_1 = 2.0 * result_1;
+    //printf("line: %d, doubel angle is: %f\n", __LINE__, dbl_result_1);
+    //double cos_1 = cos(result_1 * PI / 180);
+    //double distance_1 = 10 / cos_1;
+    //printf("The cos of %f is %lf, distance: %lf\n", result_1, cos_1, distance_1);
+/***
+    double param_2, result_2;
+    param_2 = 0.115;
+    result_2 = atan(param_2) * 180 / PI;
+    printf("The arc tangent of %f is %f\n", param_2, result_2);
+    double cos_2 = cos(result_2 * PI / 180);
+    double distance_2 = 10 / cos_2;
+    printf("The cos of %f is %lf, distance: %lf\n", result_2, cos_2, distance_2);
 
-    double test_17_deg = 17.0;
-    double cos_17 = cos(test_17_deg * PI / 180);
-    double distance_17deg = 10 / cos_17;
-    printf("The cos of %f is %lf, distance: %lf\n", test_17_deg, cos_17, distance_17deg);
+    double param_3, result_3;
+    param_3 = 0.20;
+    result_3 = atan(param_3) * 180 / PI;
+    printf("The arc tangent of %f is %f\n", param_3, result_3);
+    double cos_3 = cos(result_3 * PI / 180);
+    double distance_3 = 10 / cos_3;
+    printf("The cos of %f is %lf, distance: %lf\n", result_3, cos_3, distance_3);
 
-    double test_18_deg = 18.0;
-    double cos_18 = cos(test_18_deg * PI / 180);
-    double distance_18deg = 10 / cos_18;
-    printf("The cos of %f is %lf, distance: %lf\n", test_18_deg, cos_18, distance_18deg);
+    double param_4, result_4;
+    param_4 = 0.67;
+    result_4 = atan(param_4) * 180 / PI;
+    printf("The arc tangent of %f is %f\n", param_4, result_4);
+    double cos_4 = cos(result_4 * PI / 180);
+    double distance_4 = 10 / cos_4;
+    printf("The cos of %f is %lf, distance: %lf\n", result_4, cos_4, distance_4);
+***/
+/***    double cos_20 = cos(20.0 * PI / 180);
+    double distance_2_0m_20 = 2.0 / cos_20;
+    printf("The cos of %f is %lf, distance: %lf\n", 20.0, cos_20, distance_2_0m_20);
+***/
+/**    double cos_30 = cos(30.0 * PI / 180);
+    double distance_1_5m_30 = 1.5 / cos_30;
+    printf("The cos of %f is %lf, distance: %lf\n", 30.0, cos_30, distance_1_5m_30);
 
-    double test_19_deg = 19.0;
-    double cos_19 = cos(test_19_deg * PI / 180);
-    double distance_19deg = 10 / cos_19;
-    printf("The cos of %f is %lf, distance: %lf\n", test_19_deg, cos_19, distance_19deg);
+    double cos_45 = cos(45.0 * PI / 180);
+    double distance_1_5m_45 = 1.5 / cos_45;
+    printf("The cos of %f is %lf, distance: %lf\n", 45.0, cos_45, distance_1_5m_45);
+**/
+/***
+    double test_10 = 10.0;
+    double cos_10 = cos(test_10 * PI / 180);
+    double distance_10 = 10 / cos_10;
+    printf("The cos of %f is %lf, distance: %lf\n", test_10, cos_10, distance_10);
+
+    double test_11 = 11.0;
+    double cos_11 = cos(test_11 * PI / 180);
+    double distance_11 = 10 / cos_11;
+    printf("The cos of %f is %lf, distance: %lf\n", test_11, cos_11, distance_11);
+
+    double test_12 = 12.0;
+    double cos_12 = cos(test_12 * PI / 180);
+    double distance_12 = 10 / cos_12;
+    printf("The cos of %f is %lf, distance: %lf\n", test_12, cos_12, distance_12);
+
+    double test_13 = 13.0;
+    double cos_13 = cos(test_13 * PI / 180);
+    double distance_13 = 10 / cos_13;
+    printf("The cos of %f is %lf, distance: %lf\n", test_13, cos_13, distance_13);
+
+    double test_14 = 14.0;
+    double cos_14 = cos(test_14 * PI / 180);
+    double distance_14 = 10 / cos_14;
+    printf("The cos of %f is %lf, distance: %lf\n", test_14, cos_14, distance_14);
+
+    double test_15 = 15.0;
+    double cos_15 = cos(test_15 * PI / 180);
+    double distance_15 = 10 / cos_15;
+    printf("The cos of %f is %lf, distance: %lf\n", test_15, cos_15, distance_15);
+***/
+/***
+    double test_46 = 46.0;
+    double cos_46 = cos(test_46 * PI / 180);
+    double distance_46 = 10 / cos_46;
+    printf("The cos of %f is %lf, distance: %lf\n", test_46, cos_46, distance_46);
+
+    double test_47 = 47.0;
+    double cos_47 = cos(test_47 * PI / 180);
+    double distance_47 = 10 / cos_47;
+    printf("The cos of %f is %lf, distance: %lf\n", test_47, cos_47, distance_47);
+
+    double test_48 = 48.0;
+    double cos_48 = cos(test_48 * PI / 180);
+    double distance_48 = 10 / cos_48;
+    printf("The cos of %f is %lf, distance: %lf\n", test_48, cos_48, distance_48);
+
+    double test_49 = 49.0;
+    double cos_49 = cos(test_49 * PI / 180);
+    double distance_49 = 10 / cos_49;
+    printf("The cos of %f is %lf, distance: %lf\n", test_49, cos_49, distance_49);
+
+    double test_50 = 50.0;
+    double cos_50 = cos(test_50 * PI / 180);
+    double distance_50 = 10 / cos_50;
+    printf("The cos of %f is %lf, distance: %lf\n", test_50, cos_50, distance_50);
+
+    double test_60 = 60.0;
+    double cos_60 = cos(test_60 * PI / 180);
+    double distance_60 = 10 / cos_60;
+    printf("The cos of %f is %lf, distance: %lf\n", test_60, cos_60, distance_60);
+
+    double test_63 = 63.0;
+    double cos_63 = cos(test_63 * PI / 180);
+    double distance_63 = 10 / cos_63;
+    printf("The cos of %f is %lf, distance: %lf\n", test_63, cos_63, distance_63);
+
+    double test_57 = 57.0;
+    double cos_57 = cos(test_57 * PI / 180);
+    double distance_57 = 5 / cos_57;
+    printf("The cos of %f is %lf, distance: %lf\n", test_57, cos_57, distance_57);
+***/
+/**
+    double test_20 = 20.0;
+    double tan_20 = tan(test_20 * PI / 180);
+    double distance_20_2 = 2.0 * tan_20;
+    printf("The tangent of %f is %f, distance: %f\n", test_20, tan_20, distance_20_2);
+    double distance_20_2_5 = 2.5 * tan_20;
+    printf("The tangent of %f is %f, distance: %f\n", test_20, tan_20, distance_20_2_5);
+**/
+/***    double test_30 = 30.0;
+    double tan_30 = tan(test_30 * PI / 180);
+    double distance_30 = 10.0 * tan_30;
+    printf("The tangent of %f is %f, distance: %f\n", test_30, tan_30, distance_30);
+***/
+/**    double distance_30_1_5 = 1.5 * tan_30;
+    printf("The tangent of %f is %f, distance: %f\n", test_30, tan_30, distance_30_1_5);
+    double distance_30_2_0 = 2.0 * tan_30;
+    printf("The tangent of %f is %f, distance: %f\n", test_30, tan_30, distance_30_2_0);
+    double distance_30_2_5 = 2.5 * tan_30;
+    printf("The tangent of %f is %f, distance: %f\n", test_30, tan_30, distance_30_2_5);
+**/
+/***    double cos_result = cos(result * PI / 180);
+    double distance_result = 10 / cos_result;
+    printf("The cos of %f is %lf, distance: %lf\n", result, cos_result, distance_result);
+
+    double cos_result_2 = cos(result_2 * PI / 180);
+    double distance_result_2 = 10 / cos_result_2;
+    printf("The cos of %f is %lf, distance: %lf\n", result_2, cos_result_2, distance_result_2);
 ***/
 
-    double test_24_deg = 24;
-    double cos_24 = cos(test_24_deg * PI / 180);
-    double value = 6.1 / 6.7;
-    double dd = acos(value) * 180 / PI;
-    printf("The cos of %f is %lf, distance: %lf, dd: %f\n", test_24_deg, cos_24, value, dd);
-
-    double test_22_deg = 22.0;
-    double cos_22 = cos(test_22_deg * PI / 180);
-    double distance_22deg = 10 / cos_22;
-    printf("The cos of %f is %lf, distance: %lf\n", test_22_deg, cos_22, distance_22deg);
-
-    double test_25_deg = 25.0;
-    double cos_25 = cos(test_25_deg * PI / 180);
-    double distance_25deg = 10 / cos_25;
-    printf("The cos of %f is %lf, distance: %lf\n", test_25_deg, cos_25, distance_25deg);
-
-    /***
-    double test_25_deg = 25.0;
-    double cos_25 = cos(test_25_deg * PI / 180);
-    double distance_25deg = 7 / cos_25;
-    printf("The cos of %f is %lf, distance: %lf\n", test_25_deg, cos_25, distance_25deg);
-
-    double test_26_deg = 26.0;
-    double cos_26 = cos(test_26_deg * PI / 180);
-    double distance_26deg = 7 / cos_26;
-    printf("The cos of %f is %lf, distance: %lf\n", test_26_deg, cos_26, distance_26deg);
-
-    double test_27_deg = 27.0;
-    double cos_27 = cos(test_27_deg * PI / 180);
-    double distance_27deg = 7 / cos_27;
-    printf("The cos of %f is %lf, distance: %lf\n", test_27_deg, cos_27, distance_27deg);
-
-    double test_28_deg = 28.0;
-    double cos_28 = cos(test_28_deg * PI / 180);
-    double distance_28deg = 7 / cos_28;
-    printf("The cos of %f is %lf, distance: %lf\n", test_28_deg, cos_28, distance_28deg);
-
-    double test_29_deg = 29.0;
-    double cos_29 = cos(test_29_deg * PI / 180);
-    double distance_29deg = 7 / cos_29;
-    printf("The cos of %f is %lf, distance: %lf\n", test_29_deg, cos_29, distance_29deg);
-***/
     return 0;
 }

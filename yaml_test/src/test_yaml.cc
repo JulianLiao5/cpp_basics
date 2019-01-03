@@ -4,7 +4,7 @@
 #include <yaml-cpp/yaml.h>
 
 int main(int argc, char *argv[]) {
-    YAML::Node config = YAML::LoadFile("config/config.yaml");
+    YAML::Node config = YAML::LoadFile("../config/config.yaml");
 
     if (config["debug"]) {
         int debug = config["debug"]["on"].as<int>();
@@ -16,4 +16,3 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
-

@@ -6,7 +6,7 @@
  ************************************************************************/
 
 #include<iostream>
-#include<fstream>
+#include<sstream>
 using namespace std;
 
 
@@ -14,8 +14,17 @@ using namespace std;
 #include <fstream>      // std::fstream
 
 int main (int argc, char **argv) {
+  std::ostringstream oss;
 
+  for (int n=0; n<100; ++n)
+  {
+    oss << n;
+    oss.str("");
+    // outfile.str().clear();
+  }
+  std::cout << oss.str() << std::endl;
 
+/**
   ofstream radar77File;
   radar77File.open("./radar77_data.txt", ios::out);
   // radar77File << "This is a test" << std::endl;
@@ -38,6 +47,6 @@ int main (int argc, char **argv) {
   fs << 6;
   // i/o operations here
 
-  fs.close();
+  fs.close();  **/
   return 0;
 }

@@ -1,11 +1,12 @@
-cmake_minimum_required(VERSION 3.5.1)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -g -O3 -std=c++11")
+set(CMAKE_CXX_STANDARD 14)
+PROJECT(test_reqrep)
 
-FIND_PACKAGE(yaml-cpp REQUIRED)
+include_directories(include)
 
-message("abc: " + ${YAML_CPP_INCLUDE_DIR})
-include_directories(${YAML_CPP_INCLUDE_DIR})
-add_executable(test_yaml src/test_yaml.cc)
+add_executable(test_reqrep_REQUEST test_reqrep_REQUEST.cpp)
+target_link_libraries(test_reqrep_REQUEST ${CMAKE_SOURCE_DIR}/lib/libpi_msg_utils.a nanomsg pthread)
 
-target_link_libraries(test_yaml yaml-cpp)
+add_executable(test_reqrep_REPLY test_reqrep_REPLY.cpp)
+target_link_libraries(test_reqrep_REPLY ${CMAKE_SOURCE_DIR}/lib/libpi_msg_utils.a nanomsg pthread)

@@ -24,3 +24,9 @@ target_link_libraries(test_connection ${Boost_LIBRARIES})
 
 add_executable(test_connection_2 ./connection/test_connection_2.cpp)
 target_link_libraries(test_connection_2 ${Boost_LIBRARIES})
+
+add_executable(test_connection_3 ./connection/test_connection_3.cpp)
+target_link_libraries(test_connection_3 ${Boost_LIBRARIES})
+
+add_executable(test_second_boost ./second_stage/test_second_boost.cpp)
+target_link_libraries(test_second_boost ${Boost_LIBRARIES})

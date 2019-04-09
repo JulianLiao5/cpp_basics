@@ -9,3 +9,18 @@ message(STATUS "boost libraries dirs: " ${Boost_LIBRARIES})
 
 add_executable(test_boost ./test_boost.cpp)
 target_link_libraries(test_boost ${Boost_LIBRARIES})
+
+add_executable(test_boost_2 ./test_boost_2.cpp)
+target_link_libraries(test_boost_2 ${Boost_LIBRARIES})
+
+add_executable(test_boost_3 ./test_boost_3.cpp)
+target_link_libraries(test_boost_3 ${Boost_LIBRARIES})
+
+add_executable(test_boost_4 ./test_boost_4.cpp)
+target_link_libraries(test_boost_4 ${Boost_LIBRARIES})
+
+add_executable(test_connection ./connection/test_connection.cpp)
+target_link_libraries(test_connection ${Boost_LIBRARIES})
+
+add_executable(test_connection_2 ./connection/test_connection_2.cpp)
+target_link_libraries(test_connection_2 ${Boost_LIBRARIES})

@@ -10,12 +10,20 @@ using namespace std;
 
 #include <boost/signals2/signal.hpp>
 
-struct HelloWorld {
+struct Hello {
   void operator()() const;
 };
 
-void HelloWorld::operator()() const {
-  std::cout << "Hello, liaomeng!" << std::endl;
+void Hello::operator()() const {
+  std::cout << "Kyra" << std::endl;
+}
+
+struct World {
+  void operator()() const;
+};
+
+void World::operator()() const {
+  std::cout << ", Julian!" << std::endl;
 }
 
 int main(int argc, char *argv[]) {
@@ -23,8 +31,8 @@ int main(int argc, char *argv[]) {
   boost::signals2::signal<void ()> sig;
 
   // Connect a HelloWorld slot
-  HelloWorld hello;
-  sig.connect(hello);
+  sig.connect(Hello());
+  sig.connect(World());
 
   // Call all of the slots
   sig();

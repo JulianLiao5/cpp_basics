@@ -9,6 +9,7 @@
 using namespace std;
 
 #include <boost/signals2/signal.hpp>
+#include <boost/signals2/shared_connection_block.hpp>
 
 struct HelloWorld {
   void operator()() const;
@@ -20,13 +21,19 @@ void HelloWorld::operator()() const {
 
 int main(int argc, char *argv[]) {
   // Signal with no arguments and a void return value
-  boost::signals2::signal<void ()> sig;
+  boost::signals2::signal<void()> sig;
 
-  // Connect a HelloWorld slot
-  HelloWorld hello;
-  sig.connect(hello);
+  boost::signals2::connection c = sig.connect(HelloWorld());
+  std::cout << "c is not blocked\n";
+  sig();
 
-  // Call all of the slots
+    {
+        boost::signals2::shared_connection_block block(c);
+        std::cout << "c is blocked!\n";
+        sig();  // No output: the slot is blocked
+    }  // shared_connection_block going out of scope unblocks the slot
+
+  std::cout << "c is not blocked\n";
   sig();
 
   return 0;

@@ -20,13 +20,14 @@ void HelloWorld::operator()() const {
 
 int main(int argc, char *argv[]) {
   // Signal with no arguments and a void return value
-  boost::signals2::signal<void ()> sig;
+  boost::signals2::signal<void()> sig;
 
-  // Connect a HelloWorld slot
-  HelloWorld hello;
-  sig.connect(hello);
+  boost::signals2::connection c = sig.connect(HelloWorld());
+  std::cout << "c is connected\n";
+  sig();
 
-  // Call all of the slots
+  c.disconnect();
+  std::cout << "c is disconnected\n";
   sig();
 
   return 0;

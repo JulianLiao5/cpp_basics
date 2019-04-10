@@ -30,3 +30,9 @@ target_link_libraries(test_connection_3 ${Boost_LIBRARIES})
 
 add_executable(test_second_boost ./second_stage/test_second_boost.cpp)
 target_link_libraries(test_second_boost ${Boost_LIBRARIES})
+
+add_executable(doc_view ./examples/doc_view.cpp)
+target_link_libraries(doc_view ${Boost_LIBRARIES})
+
+add_executable(origin_1_58 ./examples/origin_doc_view_1_58_0.cpp)
+target_link_libraries(origin_1_58 ${Boost_LIBRARIES})

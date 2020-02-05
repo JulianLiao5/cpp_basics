@@ -125,15 +125,17 @@ int main(int argc, char** argv) {
     Vector3d x2 = A2.colPivHouseholderQr().solve(b2);
     cout << "The solution(x2) is:\n" << x2 << endl;
 
-    A2 << 0, -1,  0.935,    1, 0, 0.77,    0,0,1;
-    b2 << 0.762372, 1.17472, 1;
-    cout << "A2:\n" << A2 << "\n\n";
-    cout << "b2:\n" << b2 << "\n\n";
-    Vector3d x3 = A2.colPivHouseholderQr().solve(b2);
-    cout << "The solution(x3) is:\n" << x3 << endl;
+    Matrix3d T_vehicle_radar2;
+    Vector3d pose_in_vehicle;
+    T_vehicle_radar2 << 0, 1,  0.935,    -1, 0, -0.755,    0,0,1;
+    pose_in_vehicle << 1.48406, -1.25112, 1;
+    cout << "T_vehicle_radar2:\n" << T_vehicle_radar2 << "\n\n";
+    cout << "pose_in_vehicle:\n" << pose_in_vehicle << "\n\n";
+    Vector3d pose_in_radar2 = T_vehicle_radar2.colPivHouseholderQr().solve(pose_in_vehicle);
+    cout << "The solution(pose_in_radar2) is:\n" << pose_in_radar2 << endl;
 
-    double Azimuth = atan2(-x3[1], x3[0]) * 180 / M_PI;
-    double Range = x3[0] / cos(Azimuth * M_PI / 180);
+    double Azimuth = atan2(-pose_in_radar2[1], pose_in_radar2[0]) * 180 / M_PI;
+    double Range = pose_in_radar2[0] / cos(Azimuth * M_PI / 180);
     cout << "\nRange: " << Range << ", Azimuth: " << Azimuth << "\n";
 
     // ----------------END basic linear solving-----------------------

@@ -10,10 +10,11 @@ a. x86_64
 char  |  x86_64  |  1  |  -128  |  127  |  char 同 signed char
 signed char  |  x86_64  |  1  |  -128  |  127  |  无
 unsigned char  |  x86_64  |  1  |  0  |  255  |  无
+short  |  x86_64  |  2  |  -32768  |  32767  |  同short int
+short int  |  x86_64  |  2  |  -32768  |  32767  |  无
+unsigned_short  |  x86_64  |  2  |  0  |  65535  |  无
 int  |  x86_64  |  4  |  技术  |  未知  |  无
 unsigned int  |  x86_64  |  4  |  技术  |  未知  |  无
-short  |  x86_64  |  2  |  技术  |  未知  |  2018-11
-short int  |  x86_64  |  2  |  技术  |  未知  |  未知
 uint8_t  |  x86_64  |  1  |  技术  |  未知  |  未知
 int8_t  |  x86_64  |  1  |  技术  |  未知  |  未知
 uint16_t  |  x86_64  |  2  |  技术  |  未知  |  未知

@@ -18,10 +18,18 @@ int main(int argc, char *argv[]) {
   std::cout << __LINE__ << "  max_unsigned_char: " << UCHAR_MAX << std::endl;
   **/
   /**------------------END char-----------------------**/
-  int aa;
-  unsigned int bb;
+  /**------------------BEGIN short-----------------------**/
+  /**
+  unsigned short us33;
   short int cc;
   short dd;
+  printf("unsigned short_size: %ld, short int size: %ld, short_size: %ld\n", sizeof(us33), sizeof(cc), sizeof(dd));
+  std::cout << __LINE__ << "  min_short_int: " << SHRT_MIN << ", max_short_int: " << SHRT_MAX << std::endl;
+  std::cout << __LINE__ << "  max_unsigned_short_int: " << USHRT_MAX << std::endl;
+  **/
+  /**------------------END short-----------------------**/
+  int aa;
+  unsigned int bb;
   uint8_t a1;
   int8_t a2;
   uint16_t b1;

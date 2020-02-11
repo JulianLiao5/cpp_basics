@@ -6,8 +6,25 @@
 int main(int argc, char *argv[]) {
   int aa;
   unsigned int bb;
-  short cc;
-  printf("int_size: %ld, unsigned int size: %ld, short size: %ld\n", sizeof(aa), sizeof(bb), sizeof(cc));
+  short int cc;
+  short dd;
+  uint8_t a1;
+  int8_t a2;
+    uint16_t b1;
+    int16_t b2;
+    uint32_t c1;
+    int32_t c2;
+    uint64_t d1;
+    int64_t d2;
+  printf("int_size: %ld, unsigned int size: %ld, short_int_size: %ld, short size: %ld\n", sizeof(aa), sizeof(bb), sizeof(cc), sizeof(dd));
+
+  printf("uint8_t_size: %ld, int8_t size: %ld, uint16_t_size: %ld, int16_t size: %ld\n", sizeof(a1), sizeof(a2), sizeof(b1), sizeof(b2));
+  printf("uint32_t_size: %ld, int32_t size: %ld, uint64_t_size: %ld, int64_t size: %ld\n", sizeof(c1), sizeof(c2), sizeof(d1), sizeof(d2));
+/**
+  printf("min_int8_t: %d, max_int8_t: %d\n", MIN_OF(int8_t), MAX_OF(int8_t));
+  printf("min_int16_t: %d, max_int16_t: %d\n", MIN_OF(int16_t), MAX_OF(int16_t));
+  printf("min_int32_t: %d, max_int32_t: %d\n", MIN_OF(int32_t), MAX_OF(int32_t));
+**/
 
   std::string s1 = "0051";
   std::string s2 =  "00 01 00 00 00 00 00 00 ";

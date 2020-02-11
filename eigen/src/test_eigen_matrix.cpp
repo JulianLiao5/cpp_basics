@@ -6,6 +6,7 @@
  ************************************************************************/
 
 
+#include<iomanip>
 #include<iostream>
 
 #include <Eigen/Core>
@@ -17,6 +18,23 @@ using namespace std;
 
 
 int main(int argc, char** argv) {
+    Matrix<long double, 3, 3> T_utm_ant;  // 从天线局部坐标系转至utm绝对坐标系下
+    long double heading = -2.1198245495947527495;
+    T_utm_ant << cosf(heading), sinf(heading), 196425.05365922278725, -sinf(heading), cosf(heading), 2509221.0837410204113, 0, 0, 1;
+    cout << "==T_utm_ant==\n" << setprecision(16) << T_utm_ant << "\n\n";
+    Matrix<long double, 3, 3> T_ant_vehicle;    // 从车体坐标系转至天线局部坐标系
+    T_ant_vehicle << 1, 0, -0.25, 0, 1, -0.525, 0, 0, 1;
+    Matrix<long double, 3, 3> T_utm_vehicle;  // 从车体坐标系转至utm绝对坐标系下
+    T_utm_vehicle = T_utm_ant * T_ant_vehicle;
+    cout << "==T_utm_vehicle==\n" << setprecision(16) << T_utm_vehicle << "\n\n";
+
+    Matrix<long double, 3, 1> pose_in_vehicle;
+    pose_in_vehicle << 8.023555107116699503, -0.83875358104705810547, 1;
+    Matrix<long double, 3, 1> pose_in_utm;
+    pose_in_utm = T_utm_vehicle * pose_in_vehicle;
+    cout << "==pose_in_utm==\n" << setprecision(16) << pose_in_utm << "\n\n";
+
+
     // Eigen中所有向量和矩阵都是Eigen::Matrix，它是一个模板类。它的前3个参数为：数据类型，行，列
     // 声明一个2 * 3的float矩阵
     Eigen::Matrix<float, 2, 3> matrix_23;

@@ -12,17 +12,21 @@ signed char  |  x86_64  |  1  |  -128  |  127  |  无
 unsigned char  |  x86_64  |  1  |  0  |  255  |  无
 short  |  x86_64  |  2  |  -32768  |  32767  |  同short int
 short int  |  x86_64  |  2  |  -32768  |  32767  |  无
-unsigned_short  |  x86_64  |  2  |  0  |  65535  |  无
-int  |  x86_64  |  4  |  技术  |  未知  |  无
-unsigned int  |  x86_64  |  4  |  技术  |  未知  |  无
-uint8_t  |  x86_64  |  1  |  技术  |  未知  |  未知
-int8_t  |  x86_64  |  1  |  技术  |  未知  |  未知
-uint16_t  |  x86_64  |  2  |  技术  |  未知  |  未知
-int16_t  |  x86_64  |  2  |  技术  |  未知  |  2019-10
-uint32_t  |  x86_64  |  4  |  商务  |  未知  |  2019-09
-int32_t  |  未知  |  4  |  商务  |  未知  |  2019-09
-uint64_t  |  未知  |  8  |  美工  |  未知  |  2019-09  
-int64_t  |  未知  |  8  |  美工  |  未知  |  2019-09 
+unsigned short  |  x86_64  |  2  |  0  |  65535  |  无
+int  |  x86_64  |  4  |  -2^31  |  2^31 - 1  |  无
+unsigned int  |  x86_64  |  4  |  0  |  2^32 - 1  |  无
+long  |  x86_64  |  8  |  -2^63  |  2^63 - 1  |  无
+unsigned long  |  x86_64  |  8  |  0  |  2^64 - 1  |  无
+long long |  x86_64  |  8  |  -2^63  |  2^63 - 1  |  同long
+unsigned long long |  x86_64  |  8  |  0  |  2^64 - 1  |  同unsigned long
+uint8_t  |  x86_64  |  1  |  0  |  255  | 同unsigned char
+int8_t  |  x86_64  |  1  |  -128  |  127  | 同signed char
+uint16_t  |  x86_64  |  2  |  0  |  65535  | 同unsigned short
+int16_t  |  x86_64  |  2  |  -32768  |  32767  |  同short
+uint32_t  |  x86_64  |  4  |  0  |  2^32 - 1  |  同unsigned int
+int32_t  |  未知  |  4  |  -2^31  |  2^31 - 1  |  同int
+uint64_t  |  未知  |  8  |  0  |  2^64 - 1  |  同unsigned long
+int64_t  |  未知  |  8  |  -2^63  |  2^63 - 1  |  同long
 
 ## Linux常用命令
 

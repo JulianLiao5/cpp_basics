@@ -28,8 +28,33 @@ int main(int argc, char *argv[]) {
   std::cout << __LINE__ << "  max_unsigned_short_int: " << USHRT_MAX << std::endl;
   **/
   /**------------------END short-----------------------**/
+  /**------------------BEGIN int-----------------------**/
+  /**
   int aa;
   unsigned int bb;
+  printf("int_size: %ld, unsigned int size: %ld\n", sizeof(aa), sizeof(bb));
+  std::cout << __LINE__ << "  min_int: " << INT_MIN << ", max_int: " << INT_MAX << std::endl;
+  std::cout << __LINE__ << "  max_unsigned_int: " << UINT_MAX << std::endl;
+  **/
+  /**------------------END int-----------------------**/
+  /**------------------BEGIN long-----------------------**/
+  /**
+  long laa;
+  unsigned long lbb;
+  printf("long_size: %ld, unsigned long size: %ld\n", sizeof(laa), sizeof(lbb));
+  std::cout << __LINE__ << "  min_long_int: " << LONG_MIN << ", max_long_int: " << LONG_MAX << std::endl;
+  std::cout << __LINE__ << "  max_unsigned_long_int: " << ULONG_MAX << std::endl;
+  **/
+  /**------------------END long-----------------------**/
+  /**------------------BEGIN long long-----------------------**/
+  /**
+  long long laal;
+  unsigned long long lbbl;
+  printf("long_long size: %ld, unsigned long long size: %ld\n", sizeof(laal), sizeof(lbbl));
+  std::cout << __LINE__ << "  min_long_long_int: " << LLONG_MIN << ", max_long_long_int: " << LLONG_MAX << std::endl;
+  std::cout << __LINE__ << "  max_unsigned_long_long_int: " << ULLONG_MAX << std::endl;
+  **/
+  /**------------------END long long-----------------------**/
   uint8_t a1;
   int8_t a2;
   uint16_t b1;
@@ -38,7 +63,6 @@ int main(int argc, char *argv[]) {
   int32_t c2;
   uint64_t d1;
   int64_t d2;
-  printf("int_size: %ld, unsigned int size: %ld, short_int_size: %ld, short size: %ld\n", sizeof(aa), sizeof(bb), sizeof(cc), sizeof(dd));
 
   printf("uint8_t_size: %ld, int8_t size: %ld, uint16_t_size: %ld, int16_t size: %ld\n", sizeof(a1), sizeof(a2), sizeof(b1), sizeof(b2));
   printf("uint32_t_size: %ld, int32_t size: %ld, uint64_t_size: %ld, int64_t size: %ld\n", sizeof(c1), sizeof(c2), sizeof(d1), sizeof(d2));

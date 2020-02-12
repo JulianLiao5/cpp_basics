@@ -55,6 +55,9 @@ int main(int argc, char *argv[]) {
   std::cout << __LINE__ << "  max_unsigned_long_long_int: " << ULLONG_MAX << std::endl;
   **/
   /**------------------END long long-----------------------**/
+
+  /**------------------BEGIN x-bytes int-----------------------**/
+  /**
   uint8_t a1;
   int8_t a2;
   uint16_t b1;
@@ -63,9 +66,18 @@ int main(int argc, char *argv[]) {
   int32_t c2;
   uint64_t d1;
   int64_t d2;
-
   printf("uint8_t_size: %ld, int8_t size: %ld, uint16_t_size: %ld, int16_t size: %ld\n", sizeof(a1), sizeof(a2), sizeof(b1), sizeof(b2));
   printf("uint32_t_size: %ld, int32_t size: %ld, uint64_t_size: %ld, int64_t size: %ld\n", sizeof(c1), sizeof(c2), sizeof(d1), sizeof(d2));
+  **/
+  /**------------------END x-bytes int-----------------------**/
+
+  /**------------------BEGIN float/double-----------------------**/
+  /**
+  float f1;
+  double d1;
+  printf("float_size: %ld, double size: %ld\n", sizeof(f1), sizeof(d1));
+  **/
+  /**------------------END float/double-----------------------**/
 
 /**
   printf("min_int8_t: %d, max_int8_t: %d\n", MIN_OF(int8_t), MAX_OF(int8_t));

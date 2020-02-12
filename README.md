@@ -27,6 +27,8 @@ uint32_t  |  x86_64  |  4  |  0  |  2^32 - 1  |  同unsigned int
 int32_t  |  未知  |  4  |  -2^31  |  2^31 - 1  |  同int
 uint64_t  |  未知  |  8  |  0  |  2^64 - 1  |  同unsigned long
 int64_t  |  未知  |  8  |  -2^63  |  2^63 - 1  |  同long
+float  |  x86_64  |  4  |  未知  |  未知  |  无
+double  |  x86_64  |  8  |  未知  |  未知  |  无
 
 ## Linux常用命令
 

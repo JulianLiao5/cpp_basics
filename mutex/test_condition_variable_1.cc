@@ -17,6 +17,7 @@ int value;
 std::condition_variable cv;
 
 void read_value() {
+    printf("ccccccccccccccccccccccc\n");
     std::cin >> value;
     cv.notify_one();
 }
@@ -28,7 +29,8 @@ int main(int argc, char *argv[]) {
     std::mutex mtx;
     std::unique_lock<std::mutex> lck(mtx);
 
-    while(cv.wait_for(lck, std::chrono::seconds(1), [&]{return false;})) {
+    while(cv.wait_for(lck, std::chrono::seconds(1), [&]{printf("aaaaaaaaaaaa\n");return false;})) {
+        printf("bbbbbbbbbbbbbb\n");
         std::cout << "." << std::endl;
     }
 

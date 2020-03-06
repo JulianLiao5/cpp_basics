@@ -41,6 +41,13 @@ https://thepythonguru.com/python-regular-expression/
 
 https://stackoverflow.com/questions/12660164/the-best-way-to-filter-a-log-by-a-dates-range-in-python
 
+https://stackoverflow.com/questions/55867124/parse-log-between-datetime-range-using-python
+
+https://stackoverflow.com/questions/30956820/log-parsing-with-regex
+
+https://regex101.com/
+
+
 ## 常用的function
 
 1. 打印lineno

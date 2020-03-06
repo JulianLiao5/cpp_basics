@@ -35,6 +35,12 @@ $  |  end of string  |  字符串的结尾  |  无
 [0-9]  |  match a single character in the range 0-9  |  匹配0到9之间单个字符  |  [0-9]同\d
 [-+]?  |  ? means an option  |  ?意味着可选，即加号或者减号  |  无
 
+极好的文章列表：
+
+https://thepythonguru.com/python-regular-expression/
+
+https://stackoverflow.com/questions/12660164/the-best-way-to-filter-a-log-by-a-dates-range-in-python
+
 ## 常用的function
 
 1. 打印lineno

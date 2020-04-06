@@ -16,8 +16,8 @@ https://stackoverflow.com/questions/42725409/skip-zero-values-in-barchart-matplo
 ^  |  start of string  |  字符串的开头  |  无
 $  |  end of string  |  字符串的结尾  |  无
 .  |  dot matches any character except newline  |  匹配除newline外任意单个字符  |  无
-+  |  match one or more of the preceding character  |  匹配一个或多个前面的字符  |  无
-*  |  match zero or more of the preceding character  |  匹配零个或多个前面的字符  |  无
+\+  |  match one or more of the preceding character  |  匹配一个或多个前面的字符  |  无
+\*  |  match zero or more of the preceding character  |  匹配零个或多个前面的字符  |  无
 .+  |  match one or more characters until newline  |  匹配直到碰到newline的字符串  |  无
 \S  |  match single non-whitespace character  |  匹配单个非空白字符  |  无
 \S+  |  match one or more non-whitespace charcaters |  匹配一个或多个非空白字符串  |  无

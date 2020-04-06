@@ -58,6 +58,17 @@ def lineno():
     """Returns the current line number in program."""
     return str(inspect.currentframe().f_back.f_lineno) + "  "
 
+2. 写csv文件
+
+2.1 方案1
+
+```
+sensors_file = 'pi_sensors.csv'
+with open(sensors_file, 'w') as sensors_f:
+    sensors_f.write("Start_time,Area,Timestamp,Sensor type,Sensor id,Range,Angle\n")
+    sensors_f.write('%s,%s,%s,%s,%d,%f,%f\n' % ('10:40:36.390728', 'slowdown', '10:44:58.054139', 'RADAR', 0, 19.86, 5.8))
+```
+
 ## 常用的第三方库
 
 1. glog

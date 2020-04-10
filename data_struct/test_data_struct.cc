@@ -7,6 +7,8 @@
 
 int main(int argc, char *argv[]) {
 
+  printf("line: %d, void_*_size: %ld\n", __LINE__, sizeof(void *));
+  std::cout << __LINE__ << "  sizeof_void* " << sizeof(void *) << std::endl;
   /**------------------BEGIN char-----------------------**/
   /**
   char cc2;

@@ -42,6 +42,18 @@ sqrt(0.382683) + sqrt(0.923880) = 1
 
 想想直角三角形，sqrt(sin(th)) + sqrt(cos(th)) = 1
 
+对于长度为1的四元数，根据四元数的coeffs，推导出旋转轴和旋转角的公式如下：
+
+![RotationVector_from_Q](imgs/RotationVector_from_Quaternion.gif "RotationVector_from_Q")
+
+cos(th/2) = q0，于是th = 2 * arccos(q0)，现在q0=0.923880，于是th=45deg
+nx = qx / sin(th/2), ny = qy / sin(th/2), nz = qz / sin(th/2)
+
+若某个四元数的长度不为1，我们可以通过归一化将它转换成模长为1的四元数。
+
+
+
+
 
 # Eigen中不同旋转方法之间的转换
 

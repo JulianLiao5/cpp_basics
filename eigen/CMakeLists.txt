@@ -9,3 +9,5 @@ include_directories(${EIGEN3_INCLUDE_DIR})
 
 add_executable(test_eigen_matrix src/test_eigen_matrix.cpp)
 target_link_libraries(test_eigen_matrix)
+
+add_executable(eigen_geometry_1 src/eigen_geometry_1.cpp)

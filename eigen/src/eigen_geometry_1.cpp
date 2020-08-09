@@ -1,3 +1,4 @@
+#include <iostream>
 
 #include <Eigen/Dense>
 
@@ -6,13 +7,26 @@ using namespace Eigen;
 
 int main(int argc, char **argv) {
 
-  AngleAxisd t_V(M_PI/4, Vector3d(0,0,1));  // 旋转向量
-  Matrix3d t_R = t_V.matrix();
-  Quaterniond t_Q(t_V);
+  AngleAxisd t_V(M_PI/4, Vector3d(0,0,1));  // 旋转向量，绕Z轴旋转45度
+  Matrix3d t_R = t_V.matrix();  // 旋转向量通过调用matrix()可转换成旋转矩阵。
+  Quaterniond t_Q(t_V);  // 四元数可以通过旋转向量做初始化
 
   // 1. 使用旋转的角度和旋转轴向量来初始化角轴
   AngleAxisd V1(M_PI/4, Vector3d(0,0,1));
   cout << "Rotation vector1: " << endl << V1.matrix() << endl;
+
+  cout << "----------------------" << endl;
+  cout << "t_Q: " << endl << t_Q.coeffs() << endl << endl;
+  cout << "----------------------" << endl;
+
+/**
+ * 当旋转轴是z轴时，即(0,0,1)，旋转矩阵如下：
+ * [cos(th) -sin(th) 0 0]
+ * [sin(th)  cos(th) 0 0]
+ * [     0        0  1 0]
+ * [     0        0  0 1]
+ */
+
 
 // ========================BEGIN [旋转向量]2==================================
   // 2. 使用旋转矩阵转旋转向量的3种方式。a. 调用函数fromRotationMatrix() b. 通过=赋值 c. 使用旋转矩阵来对旋转向量进行初始化
@@ -28,6 +42,8 @@ int main(int argc, char **argv) {
   AngleAxisd V4(t_R);
   cout << "Rotation vector4: " << endl << V4.matrix() << endl;
 // ========================END [旋转向量]2==================================
+
+// 2020.08.08 16:36  这份代码我已理解至此。
 
 // ========================BEGIN [旋转向量]3==================================
   // 3. 使用四元素来对旋转向量赋值的2种方式。a. 通过=赋值 b. 用四元素对旋转向量初始化

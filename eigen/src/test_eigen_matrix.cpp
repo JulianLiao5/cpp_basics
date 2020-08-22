@@ -143,6 +143,17 @@ int main(int argc, char** argv) {
     Vector3d x2 = A2.colPivHouseholderQr().solve(b2);
     cout << "The solution(x2) is:\n" << x2 << endl;
 
+    Matrix3d POD4_T_veh_radar0;
+    POD4_T_veh_radar0 << 1.000000,  0.000000,  1.860000,
+                         0.000000,  1.000000,  0.000000,
+                         0.000000,  0.000000,  1.000000;
+    Vector3d pod4_pose_in_veh;
+    pod4_pose_in_veh << 4.80039, -1.91682, 1;
+    Vector3d pod4_pose_in_radar0 = POD4_T_veh_radar0.colPivHouseholderQr().solve(pod4_pose_in_veh);
+    double pod4_tmp_Azimuth = atan2(-pod4_pose_in_radar0[1], pod4_pose_in_radar0[0]) * 180 / M_PI;
+    double pod4_tmp_Range = pod4_pose_in_radar0[0] / cos(pod4_tmp_Azimuth * M_PI / 180);
+    cout << "\npod4_tmp_Range: " << pod4_tmp_Range << ", pod4_tmp_Azimuth: " << pod4_tmp_Azimuth << "\n";
+
     Matrix3d POD4_T_veh_radar1;
     POD4_T_veh_radar1 << 0.707107,  0.707107,  1.810000,
                         -0.707107,  0.707107, -0.687000,
@@ -189,11 +200,11 @@ int main(int argc, char** argv) {
 
 
     Matrix3d S12_T_vehicle_radar0;
-    S12_T_vehicle_radar0 << 1.000000,  0.000000,  3.030000,
+    S12_T_vehicle_radar0 << 1.000000,  0.000000,  3.186000,
                             0.000000,  1.000000,  0.000000,
                             0.000000,  0.000000,  1.000000;
     Vector3d aaa_pose_in_veh;
-    aaa_pose_in_veh << 4.83506, 0.171541, 1;
+    aaa_pose_in_veh << 5.23393, 1.17286, 1;
     Vector3d aaa_pose_in_radar0 = S12_T_vehicle_radar0.colPivHouseholderQr().solve(aaa_pose_in_veh);
     double aaa_tmp_Azimuth = atan2(-aaa_pose_in_radar0[1], aaa_pose_in_radar0[0]) * 180 / M_PI;
     double aaa_tmp_Range = aaa_pose_in_radar0[0] / cos(aaa_tmp_Azimuth * M_PI / 180);
@@ -204,7 +215,7 @@ int main(int argc, char** argv) {
                            -0.656059,  0.754710, -0.745000,
                             0.000000,  0.000000,  1.000000;
     Vector3d tmp_pose_in_veh;
-    tmp_pose_in_veh << 6.45411, -1.24563, 1;
+    tmp_pose_in_veh << 6.8044, -0.952122, 1;
     Vector3d pose_in_radar1 = S12_T_vehicle_radar1.colPivHouseholderQr().solve(tmp_pose_in_veh);
     double tmp_Azimuth = atan2(-pose_in_radar1[1], pose_in_radar1[0]) * 180 / M_PI;
     double tmp_Range = pose_in_radar1[0] / cos(tmp_Azimuth * M_PI / 180);
@@ -215,7 +226,7 @@ int main(int argc, char** argv) {
                             0.559193,  0.829038,  0.745000,
                             0.000000,  0.000000,  1.000000;
     Vector3d d_pose_in_veh;
-    d_pose_in_veh << 7.88103, -0.513372, 1;
+    d_pose_in_veh << 4.72158, 2.95002, 1;
     Vector3d d_pose_in_radar2 = S12_T_vehicle_radar2.colPivHouseholderQr().solve(d_pose_in_veh);
     double d_Azimuth = atan2(-d_pose_in_radar2[1], d_pose_in_radar2[0]) * 180 / M_PI;
     double d_Range = d_pose_in_radar2[0] / cos(d_Azimuth * M_PI / 180);

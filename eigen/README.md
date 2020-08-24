@@ -24,6 +24,8 @@ Angle + Axis，Angle代表旋转角，Axis代表旋转轴，用绕任意的旋�
 
 ## 四元数(Quaternion)
 
+https://www.euclideanspace.com/maths/algebra/realNormedAlgebra/quaternions/index.htm
+
 与旋转矩阵类似，我们仍然假设某个旋转是绕单位向量![unit rotation vector](imgs/unit_vector.gif "unit rotation vector")进行了角度为th的旋转，那么这个旋转的四元数形式为：
 
 ![quaternion](imgs/quaternion_from_rotation_vector.gif "quaternion1")
@@ -53,6 +55,13 @@ nx = qx / sin(th/2), ny = qy / sin(th/2), nz = qz / sin(th/2)
 
 ## 欧拉角
 
+https://www.euclideanspace.com/maths/geometry/rotations/euler/index.htm
+
+
+----|----
+Angle applied first | heading
+Angle applied second | attitude
+Angle applied last | bank
 
 
 # Eigen中不同旋转方法之间的转换
@@ -60,6 +69,9 @@ nx = qx / sin(th/2), ny = qy / sin(th/2), nz = qz / sin(th/2)
 ![trans_among_rotations](imgs/Eigen_rotation_transformator.png "trans_among_rotations")
 
 3D空间中的变换：
+
+
+## 四元数转欧拉角
 
 
 变换类型|说明

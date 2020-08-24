@@ -2,8 +2,9 @@ cmake_minimum_required(VERSION 3.5)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -g -O3 -std=c++11")
 
-add_executable(test_condition_variable test_condition_variable.cpp)
-target_link_libraries(test_condition_variable pthread)
+project(cpp_basics)
+# add_executable(test_condition_variable test_condition_variable.cpp)
+# target_link_libraries(test_condition_variable pthread)
 
 add_executable(test_high_resolution_clock test_high_resolution_clock.cpp)
 
@@ -15,6 +16,8 @@ add_executable(test_vector_insert data_struct/test_vector_insert.cc)
 
 set(SRC_MATH math/test_math.cc)
 add_executable(test_math ${SRC_MATH})
+
+add_executable(test_math_sincos math/test_math_sincos.cc)
 
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})

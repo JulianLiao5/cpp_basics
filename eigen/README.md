@@ -58,10 +58,23 @@ nx = qx / sin(th/2), ny = qy / sin(th/2), nz = qz / sin(th/2)
 https://www.euclideanspace.com/maths/geometry/rotations/euler/index.htm
 
 
+Angles | 约定的说法
 ----|----
 Angle applied first | heading
 Angle applied second | attitude
 Angle applied last | bank
+
+欧拉角是多个旋转（绕不同的旋转轴）组合到一起的，旋转的顺序不同，旋转结果是不一样的。
+
+一共有12种不同旋转顺序的组合
+
+- xyz
+- yzx
+- zxy
+- zyx
+- xzy
+- yxz
+
 
 
 # Eigen中不同旋转方法之间的转换

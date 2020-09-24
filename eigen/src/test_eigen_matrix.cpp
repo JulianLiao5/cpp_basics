@@ -143,6 +143,18 @@ int main(int argc, char** argv) {
     Vector3d x2 = A2.colPivHouseholderQr().solve(b2);
     cout << "The solution(x2) is:\n" << x2 << endl;
 
+    Matrix3d S8_T_veh_radar1;
+    S8_T_veh_radar1 << 0.718126,  0.695913,  2.805000,
+                        -0.695913,  0.718126, -0.730000,
+                         0.000000,  0.000000,  1.000000;
+    Vector3d S8_pose_in_veh;
+    // S8_pose_in_veh << 3.20528, -1.1072, 1;
+    S8_pose_in_veh << 2.90783, -1.09582, 1;
+    Vector3d S8_pose_in_radar1 = S8_T_veh_radar1.colPivHouseholderQr().solve(S8_pose_in_veh);
+    double S8_tmp_Azimuth = atan2(-S8_pose_in_radar1[1], S8_pose_in_radar1[0]) * 180 / M_PI;
+    double S8_tmp_Range = S8_pose_in_radar1[0] / cos(S8_tmp_Azimuth * M_PI / 180);
+    cout << "\nS8_tmp_Range: " << S8_tmp_Range << ", S8_tmp_Azimuth: " << S8_tmp_Azimuth << "\n";
+
     Matrix3d POD4_T_veh_radar0;
     POD4_T_veh_radar0 << 1.000000,  0.000000,  1.860000,
                          0.000000,  1.000000,  0.000000,

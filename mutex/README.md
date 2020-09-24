@@ -1,4 +1,39 @@
-1. 关于"std::shared_timed_mutex"
+
+
+
+
+
+
+
+1. 关于std::unique_lock构造函数
+
+(6)
+template <class Rep, class Period> unique_lock(mutex_type& m, const chrono::duration<Rep, Period>& rel_time);
+
+解释：unique_lock管理着mutex m，通过调用m.try_lock_for(rel_time)，在rel_time时间内尝试锁住mutex m。
+
+关于std::timed_mutex::try_lock_for的prototype，
+
+template <class Rep, class Period> bool try_lock_for(const chrono::duration<Rep, Period>& rel_time);
+
+unique_lock尝试去锁住timed_mutex，最多被block rel_time时间，就是说过了 rel_time，calling thread无论无何都要锁住 timed_mutex。调用try_lock_for时候，有以下3种情况可能会发生：
+
+ - 1. 如果timed_mutex当前没有被任何线程锁住，calling_thread就会立即锁住 timed_mutex
+
+ - 2. 如果timed_mutex当前被另外一个线程占用了，要么2a. 另外一个线程通过调用unlock()释放了timed_mutex，要么2b. rel_time时间到了，2a或者2b谁先发生都会让calling thread获得timed_mutex
+
+ - 3. 如果timed_mutex已经被calling_thread占用了，那么当calling thread再去尝试获得一个已经被自己占用的timed_mutex，此时会造成死锁。
+
+
+
+
+
+
+
+
+
+
+2. 关于"std::shared_timed_mutex"
     a. 在C++ 14里面才开始引入
 
 与其他更容易做互斥访问的锁相比，"shared_timed_mutex"有两种访问方式：

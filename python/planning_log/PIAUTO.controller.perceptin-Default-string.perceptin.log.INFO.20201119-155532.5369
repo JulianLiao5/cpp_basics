@@ -1,0 +1,1172 @@
+Log file created at: 2020/11/19 15:55:32
+Running on machine: perceptin-Default-string
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1119 15:55:32.449107  5369 track_generator.cpp:24] find osm file as nodefile to construct a map
+I1119 15:55:32.590391  5369 track_generator.cpp:68] 415 1
+I1119 15:55:32.590955  5369 track_generator.cpp:104] finished one route request
+I1119 15:55:32.592101  5369 map_tool.cpp:84] Map node info is valid
+I1119 15:55:32.593392  5369 map_tool.cpp:101] CheckGoals OK
+I1119 15:55:33.633396  5369 can_transmitter.cpp:94] Set receive thread to SCHED_RR failed.
+I1119 15:55:33.633409  5369 can_transmitter.cpp:96] Can device opened.
+I1119 15:55:33.633445  5385 can_transmitter.cpp:206] Receive data thread starts.
+I1119 15:55:33.663564  5369 can_obj.cpp:97] CanObj initialized.
+I1119 15:55:33.663585  5369 fusion_multi_sensors.cc:108] send fusion obstacles to: tcp://0.0.0.0:4451
+I1119 15:55:33.663589  5369 fusion_multi_sensors.cc:111] sub VIO localization from: tcp://127.0.0.1:5557
+I1119 15:55:33.663615  5387 can_obj.cpp:236] Chassis heart beat thread starts.
+I1119 15:55:33.663727  5386 VCU.cpp:102] VCU send thread starts.
+I1119 15:55:33.763811  5369 localization.cpp:18] ================== Localization init ======================
+W1119 15:55:33.764106  5369 localization.cpp:35] [localization] WAIT INIT, localization client not received msg! 
+I1119 15:55:33.814947  5369 stereo_barrier_range_finder.cc:115] stereo msg: subscribe to: tcp://127.0.0.1:4444
+I1119 15:55:33.814967  5369 stereo_barrier_range_finder.cc:116] stereo image: subscribe to: tcp://127.0.0.1:4445
+I1119 15:55:33.815079  5369 stereo_barrier_range_finder.cc:124] stereo msg: handlers init success
+I1119 15:55:33.815230  5369 radar_barrier_range_finder.cc:278] FLAGS_criteria2_ids is empty.
+I1119 15:55:33.815289  5369 radar_barrier_range_finder.cc:322] 316--FINAL mCriteria1Ids[2]: {1, 5, }, mCriteria1RangeMin: 2, mCriteria1RangeMax: 30, mCriteria1AngleMin: -55, mCriteria1AngleMax: 55
+I1119 15:55:33.815330  5369 radar_barrier_range_finder.cc:334] 328--FINAL mCriteria2Ids[0]: {}, mCriteria2RangeMin: 0.6, mCriteria2RangeMax: 30, mCriteria2AngleMin: -55, mCriteria2AngleMax: 55
+I1119 15:55:33.815434  5369 radar_barrier_range_finder.cc:352] Record raw data: create log /tmp/raw_radars_20201119_155533.txt
+I1119 15:55:33.815631  5369 fusion_multi_sensors.cc:178] Impl constructor done
+I1119 15:55:33.815670  5369 localization.cpp:18] ================== Localization init ======================
+W1119 15:55:33.815754  5369 localization.cpp:35] [localization] WAIT INIT, localization client not received msg! 
+I1119 15:55:33.816411  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:55:33.816437  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:55:33.967116  5404 global_msg.cpp:384]  =================== running ===================
+I1119 15:55:33.967142  5404 global_msg.cpp:385] vision state 1
+I1119 15:55:33.967167  5404 global_msg.cpp:386] radar_sonar 0
+I1119 15:55:33.967170  5404 global_msg.cpp:387] chassis status 0
+I1119 15:55:33.967171  5404 global_msg.cpp:388] localization status 3
+I1119 15:55:33.967173  5404 global_msg.cpp:389] autonomous_mode : 0
+I1119 15:55:33.967175  5404 global_msg.cpp:390] angle : 0
+I1119 15:55:33.967185  5404 global_msg.cpp:391] gear_position : 0
+I1119 15:55:33.967187  5404 global_msg.cpp:392] remaining_battery : 0
+I1119 15:55:33.967608  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:55:33.967614  5404 global_msg.cpp:375] vision state 1
+I1119 15:55:33.967617  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:55:33.967617  5404 global_msg.cpp:377] chassis status 1
+I1119 15:55:33.967619  5404 global_msg.cpp:378] localization status 0
+I1119 15:55:33.967622  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:55:33.967622  5404 global_msg.cpp:380] angle : 6.84
+I1119 15:55:33.967626  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:55:33.967628  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:55:33.972452  5382 planning_msg.cpp:30] TAG:RecvFromUI 23
+I1119 15:55:34.067817  5404 chassis_planner.cpp:446] StopCar Begin
+I1119 15:55:34.152655  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:55:35.084985  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:55:35.162077  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 3
+I1119 15:55:35.603659  5404 chassis_planner.cpp:485] StopCar end
+I1119 15:55:36.493278  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:55:37.424315  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:55:37.520273  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:55:37.520293  5404 global_msg.cpp:375] vision state 1
+I1119 15:55:37.520295  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:55:37.520298  5404 global_msg.cpp:377] chassis status 1
+I1119 15:55:37.520299  5404 global_msg.cpp:378] localization status 0
+I1119 15:55:37.520301  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:55:37.520303  5404 global_msg.cpp:380] angle : 5.48
+I1119 15:55:37.520311  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:55:37.520313  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:55:37.841755  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:55:38.593475  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:55:39.153443  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:55:39.533715  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:55:39.533732  5404 global_msg.cpp:375] vision state 1
+I1119 15:55:39.533735  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:55:39.533736  5404 global_msg.cpp:377] chassis status 1
+I1119 15:55:39.533738  5404 global_msg.cpp:378] localization status 0
+I1119 15:55:39.533740  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:55:39.533741  5404 global_msg.cpp:380] angle : 6.84
+I1119 15:55:39.533746  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:55:39.533748  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:55:40.486428  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:55:40.557101  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:55:40.766695  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:55:41.549656  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:55:41.549715  5404 global_msg.cpp:375] vision state 1
+I1119 15:55:41.549718  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:55:41.549721  5404 global_msg.cpp:377] chassis status 1
+I1119 15:55:41.549722  5404 global_msg.cpp:378] localization status 0
+I1119 15:55:41.549724  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:55:41.549726  5404 global_msg.cpp:380] angle : 7.72
+I1119 15:55:41.549744  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:55:41.549747  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:55:41.959590  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:55:42.380534  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:55:43.285054  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:55:43.562858  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:55:43.562872  5404 global_msg.cpp:375] vision state 1
+I1119 15:55:43.562875  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:55:43.562877  5404 global_msg.cpp:377] chassis status 1
+I1119 15:55:43.562878  5404 global_msg.cpp:378] localization status 0
+I1119 15:55:43.562880  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:55:43.562882  5404 global_msg.cpp:380] angle : 8.51
+I1119 15:55:43.562889  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:55:43.562891  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:55:44.375504  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:55:44.676223  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:55:45.577673  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:55:45.577728  5404 global_msg.cpp:375] vision state 1
+I1119 15:55:45.577730  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:55:45.577733  5404 global_msg.cpp:377] chassis status 1
+I1119 15:55:45.577734  5404 global_msg.cpp:378] localization status 0
+I1119 15:55:45.577736  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:55:45.577739  5404 global_msg.cpp:380] angle : 9.05
+I1119 15:55:45.577741  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:55:45.577744  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:55:46.039165  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:55:46.039198  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 2
+I1119 15:55:46.158674  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:55:47.367872  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:55:47.591668  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:55:47.591686  5404 global_msg.cpp:375] vision state 1
+I1119 15:55:47.591688  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:55:47.591691  5404 global_msg.cpp:377] chassis status 1
+I1119 15:55:47.591692  5404 global_msg.cpp:378] localization status 0
+I1119 15:55:47.591693  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:55:47.591696  5404 global_msg.cpp:380] angle : 9.32
+I1119 15:55:47.591699  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:55:47.591701  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:55:47.726413  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:55:48.764961  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:55:49.130522  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:55:49.610347  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:55:49.610368  5404 global_msg.cpp:375] vision state 1
+I1119 15:55:49.610370  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:55:49.610373  5404 global_msg.cpp:377] chassis status 1
+I1119 15:55:49.610374  5404 global_msg.cpp:378] localization status 0
+I1119 15:55:49.610375  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:55:49.610378  5404 global_msg.cpp:380] angle : 9.33
+I1119 15:55:49.610383  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:55:49.610384  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:55:50.160169  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:55:50.465253  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:55:51.479851  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:55:51.622503  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:55:51.622519  5404 global_msg.cpp:375] vision state 1
+I1119 15:55:51.622520  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:55:51.622522  5404 global_msg.cpp:377] chassis status 1
+I1119 15:55:51.622524  5404 global_msg.cpp:378] localization status 0
+I1119 15:55:51.622526  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:55:51.622527  5404 global_msg.cpp:380] angle : 9.61
+I1119 15:55:51.622536  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:55:51.622539  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:55:51.845530  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:55:52.860353  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:55:53.160727  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:55:53.643952  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:55:53.643988  5404 global_msg.cpp:375] vision state 1
+I1119 15:55:53.643991  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:55:53.643992  5404 global_msg.cpp:377] chassis status 1
+I1119 15:55:53.643994  5404 global_msg.cpp:378] localization status 0
+I1119 15:55:53.644045  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:55:53.644047  5404 global_msg.cpp:380] angle : 9.62
+I1119 15:55:53.644064  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:55:53.644066  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:55:54.206233  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:55:54.580431  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:55:55.358474  5404 stereo_barrier_range_finder.cc:335] GetObstacles long interval! obstacles update after 8933ms
+I1119 15:55:55.600524  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:55:55.660585  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:55:55.660595  5404 global_msg.cpp:375] vision state 1
+I1119 15:55:55.660598  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:55:55.660599  5404 global_msg.cpp:377] chassis status 1
+I1119 15:55:55.660601  5404 global_msg.cpp:378] localization status 0
+I1119 15:55:55.660604  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:55:55.660604  5404 global_msg.cpp:380] angle : 9.66
+I1119 15:55:55.660621  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:55:55.660624  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:55:56.408895  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:55:57.008100  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:55:57.679771  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:55:57.679806  5404 global_msg.cpp:375] vision state 1
+I1119 15:55:57.679809  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:55:57.679811  5404 global_msg.cpp:377] chassis status 1
+I1119 15:55:57.679812  5404 global_msg.cpp:378] localization status 0
+I1119 15:55:57.679814  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:55:57.679816  5404 global_msg.cpp:380] angle : 9.71
+I1119 15:55:57.679834  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:55:57.679837  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:55:58.097271  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:55:58.324999  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:55:59.370190  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 3
+I1119 15:55:59.696226  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:55:59.696244  5404 global_msg.cpp:375] vision state 1
+I1119 15:55:59.696246  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:55:59.696249  5404 global_msg.cpp:377] chassis status 1
+I1119 15:55:59.696249  5404 global_msg.cpp:378] localization status 0
+I1119 15:55:59.696251  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:55:59.696254  5404 global_msg.cpp:380] angle : 9.93
+I1119 15:55:59.696259  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:55:59.696259  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:55:59.737139  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:00.825548  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:56:01.128134  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:01.205739  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:56:01.709635  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:01.709648  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:01.709650  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:01.709652  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:01.709655  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:01.709656  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:01.709657  5404 global_msg.cpp:380] angle : 9.93
+I1119 15:56:01.709666  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:01.709667  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:02.458143  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:02.607314  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:56:03.721472  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:03.721484  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:03.721487  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:03.721488  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:03.721490  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:03.721491  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:03.721493  5404 global_msg.cpp:380] angle : 9.94
+I1119 15:56:03.721499  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:03.721501  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:03.829329  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:03.976581  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:56:05.181061  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:05.340210  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:56:05.733486  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:05.733511  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:05.733513  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:05.733515  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:05.733517  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:05.733520  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:05.733520  5404 global_msg.cpp:380] angle : 9.93
+I1119 15:56:05.733530  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:05.733532  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:06.034849  5404 stereo_barrier_range_finder.cc:335] GetObstacles long interval! obstacles update after 5134ms
+I1119 15:56:06.620435  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:07.270345  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 2
+I1119 15:56:07.751291  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:07.751299  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:07.751302  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:07.751303  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:07.751305  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:07.751307  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:07.751309  5404 global_msg.cpp:380] angle : 9.94
+I1119 15:56:07.751312  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:07.751314  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:07.995631  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:08.162674  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:56:09.315244  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:09.762727  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:09.762748  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:09.762751  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:09.762753  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:09.762754  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:09.762756  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:09.762758  5404 global_msg.cpp:380] angle : 9.9
+I1119 15:56:09.762769  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:09.762771  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:10.620885  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:56:10.692229  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:11.162832  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:56:11.779239  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:11.779250  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:11.779253  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:11.779273  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:11.779276  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:11.779278  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:11.779279  5404 global_msg.cpp:380] angle : 9.83
+I1119 15:56:11.779284  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:11.779286  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:12.070143  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:12.516522  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+E1119 15:56:13.288622  5404 localization.cpp:138] [localization] ERROR GPSONLY_POS_NOT_FIXED,  ERROR_CODE: 61
+E1119 15:56:13.289844  5404 dragonfly_pod_controller.cpp:631] Get localization error !!!
+I1119 15:56:13.290915  5404 chassis_planner.cpp:490] pause car
+I1119 15:56:13.373765  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+E1119 15:56:13.791029  5404 dragonfly_pod_controller.cpp:631] Get localization error !!!
+I1119 15:56:13.792166  5404 chassis_planner.cpp:490] pause car
+I1119 15:56:13.894029  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+E1119 15:56:14.292965  5404 localization.cpp:138] [localization] ERROR GPSONLY_POS_NOT_FIXED,  ERROR_CODE: 61
+E1119 15:56:14.294253  5404 dragonfly_pod_controller.cpp:631] Get localization error !!!
+I1119 15:56:14.295380  5404 chassis_planner.cpp:490] pause car
+I1119 15:56:14.787911  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+E1119 15:56:14.795506  5404 dragonfly_pod_controller.cpp:631] Get localization error !!!
+I1119 15:56:14.797063  5404 chassis_planner.cpp:490] pause car
+I1119 15:56:15.222108  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+E1119 15:56:15.300025  5404 localization.cpp:138] [localization] ERROR GPSONLY_POS_NOT_FIXED,  ERROR_CODE: 61
+E1119 15:56:15.301725  5404 dragonfly_pod_controller.cpp:631] Get localization error !!!
+I1119 15:56:15.302826  5404 chassis_planner.cpp:490] pause car
+I1119 15:56:16.160981  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:16.307009  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:16.307034  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:16.307036  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:16.307039  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:16.307040  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:16.307041  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:16.307044  5404 global_msg.cpp:380] angle : 9.93
+I1119 15:56:16.307051  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:16.307054  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:16.610071  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+E1119 15:56:17.314010  5404 localization.cpp:138] [localization] ERROR GPSONLY_POS_NOT_FIXED,  ERROR_CODE: 61
+E1119 15:56:17.315376  5404 dragonfly_pod_controller.cpp:631] Get localization error !!!
+I1119 15:56:17.316550  5404 chassis_planner.cpp:490] pause car
+I1119 15:56:17.493602  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+E1119 15:56:17.816632  5404 dragonfly_pod_controller.cpp:631] Get localization error !!!
+I1119 15:56:17.817773  5404 chassis_planner.cpp:490] pause car
+I1119 15:56:18.000262  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+E1119 15:56:18.317863  5404 localization.cpp:138] [localization] ERROR GPSONLY_POS_NOT_FIXED,  ERROR_CODE: 61
+E1119 15:56:18.319032  5404 dragonfly_pod_controller.cpp:631] Get localization error !!!
+I1119 15:56:18.320185  5404 chassis_planner.cpp:490] pause car
+E1119 15:56:18.820341  5404 dragonfly_pod_controller.cpp:631] Get localization error !!!
+I1119 15:56:18.821630  5404 chassis_planner.cpp:490] pause car
+I1119 15:56:18.891214  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+E1119 15:56:19.321801  5404 localization.cpp:138] [localization] ERROR GPSONLY_POS_NOT_FIXED,  ERROR_CODE: 61
+E1119 15:56:19.323055  5404 dragonfly_pod_controller.cpp:631] Get localization error !!!
+I1119 15:56:19.324175  5404 chassis_planner.cpp:490] pause car
+I1119 15:56:19.334501  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+E1119 15:56:19.824271  5404 dragonfly_pod_controller.cpp:631] Get localization error !!!
+I1119 15:56:19.825585  5404 chassis_planner.cpp:490] pause car
+I1119 15:56:20.221122  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+E1119 15:56:20.325731  5404 localization.cpp:138] [localization] ERROR GPSONLY_POS_NOT_FIXED,  ERROR_CODE: 61
+E1119 15:56:20.326992  5404 dragonfly_pod_controller.cpp:631] Get localization error !!!
+I1119 15:56:20.328137  5404 chassis_planner.cpp:490] pause car
+I1119 15:56:20.744128  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+E1119 15:56:20.828227  5404 dragonfly_pod_controller.cpp:631] Get localization error !!!
+I1119 15:56:20.829428  5404 chassis_planner.cpp:490] pause car
+E1119 15:56:21.329475  5404 localization.cpp:138] [localization] ERROR GPSONLY_POS_NOT_FIXED,  ERROR_CODE: 61
+E1119 15:56:21.330842  5404 dragonfly_pod_controller.cpp:631] Get localization error !!!
+I1119 15:56:21.332170  5404 chassis_planner.cpp:490] pause car
+I1119 15:56:21.621438  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+E1119 15:56:21.832326  5404 dragonfly_pod_controller.cpp:631] Get localization error !!!
+I1119 15:56:21.834096  5404 chassis_planner.cpp:490] pause car
+I1119 15:56:22.148317  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:56:23.023080  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:23.341177  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:23.341192  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:23.341214  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:23.341217  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:23.341218  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:23.341220  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:23.341223  5404 global_msg.cpp:380] angle : 10
+I1119 15:56:23.341225  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:23.341228  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:23.460475  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:56:24.364841  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:24.899014  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:56:25.374464  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:25.374478  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:25.374480  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:25.374482  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:25.374485  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:25.374486  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:25.374487  5404 global_msg.cpp:380] angle : 10
+I1119 15:56:25.374492  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:25.374493  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:25.743583  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:26.179208  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:56:27.105126  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:27.387970  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:27.387981  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:27.387984  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:27.387985  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:27.387987  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:27.387989  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:27.387991  5404 global_msg.cpp:380] angle : 10
+I1119 15:56:27.388015  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:27.388016  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:27.551692  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:56:27.789448  5404 stereo_barrier_range_finder.cc:335] GetObstacles long interval! obstacles update after 16666ms
+I1119 15:56:28.460644  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:28.688920  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:56:29.403745  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:29.403759  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:29.403761  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:29.403762  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:29.403764  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:29.403766  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:29.403769  5404 global_msg.cpp:380] angle : 10
+I1119 15:56:29.403771  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:29.403774  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:29.866485  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:30.361915  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:56:31.221746  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+E1119 15:56:31.323101  5404 localization.cpp:138] [localization] ERROR GPSONLY_POS_NOT_FIXED,  ERROR_CODE: 61
+E1119 15:56:31.324363  5404 dragonfly_pod_controller.cpp:631] Get localization error !!!
+I1119 15:56:31.325475  5404 chassis_planner.cpp:490] pause car
+I1119 15:56:31.676996  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+E1119 15:56:31.826956  5404 dragonfly_pod_controller.cpp:631] Get localization error !!!
+I1119 15:56:31.828084  5404 chassis_planner.cpp:490] pause car
+I1119 15:56:32.429173  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:32.429183  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:32.429186  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:32.429188  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:32.429189  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:32.429191  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:32.429193  5404 global_msg.cpp:380] angle : 10
+I1119 15:56:32.429196  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:32.429198  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:32.606412  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:33.182938  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:56:33.969012  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:34.441011  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:34.441030  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:34.441033  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:34.441035  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:34.441036  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:34.441038  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:34.441040  5404 global_msg.cpp:380] angle : 10
+I1119 15:56:34.441045  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:34.441047  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:34.662247  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:56:35.335417  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:36.454685  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 2
+I1119 15:56:36.456327  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:36.456351  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:36.456354  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:36.456357  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:36.456358  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:36.456359  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:36.456362  5404 global_msg.cpp:380] angle : 10
+I1119 15:56:36.456365  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:36.456367  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:36.888420  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:37.925388  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:56:38.208123  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:38.473335  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:38.473373  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:38.473376  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:38.473377  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:38.473379  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:38.473381  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:38.473383  5404 global_msg.cpp:380] angle : 10
+I1119 15:56:38.473400  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:38.473402  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:39.169746  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:56:39.614872  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:40.486029  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:40.486043  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:40.486045  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:40.486047  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:40.486049  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:40.486050  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:40.486052  5404 global_msg.cpp:380] angle : 10
+I1119 15:56:40.486057  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:40.486057  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:40.742478  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:56:41.033166  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:41.678997  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:56:42.349169  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:42.498276  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:42.498301  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:42.498339  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:42.498342  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:42.498343  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:42.498345  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:42.498347  5404 global_msg.cpp:380] angle : 10
+I1119 15:56:42.498354  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:42.498356  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:43.165619  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 2
+I1119 15:56:43.733311  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:44.510216  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:44.510231  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:44.510232  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:44.510234  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:44.510236  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:44.510237  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:44.510239  5404 global_msg.cpp:380] angle : 10
+I1119 15:56:44.510243  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:44.510246  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:44.608363  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 3
+I1119 15:56:45.116358  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:46.051484  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:56:46.448752  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:46.521407  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:46.521416  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:46.521418  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:46.521420  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:46.521421  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:46.521423  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:46.521425  5404 global_msg.cpp:380] angle : 10
+I1119 15:56:46.521430  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:46.521431  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:47.611202  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:56:47.835932  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:48.201360  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:56:48.533778  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:48.533803  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:48.533807  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:48.533808  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:48.533814  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:48.533816  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:48.533818  5404 global_msg.cpp:380] angle : 10
+I1119 15:56:48.533826  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:48.533828  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:49.173306  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:49.945781  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 3
+I1119 15:56:50.549361  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:50.549372  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:50.549376  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:50.549377  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:50.549376  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:50.549386  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:50.549387  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:50.549389  5404 global_msg.cpp:380] angle : 10
+I1119 15:56:50.549415  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:50.549417  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:51.411079  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 2
+I1119 15:56:52.094395  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:52.563664  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:52.563706  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:52.563709  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:52.563711  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:52.563712  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:52.563714  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:52.563716  5404 global_msg.cpp:380] angle : 10
+I1119 15:56:52.563736  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:52.563738  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:53.110909  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:56:53.474524  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:54.580726  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:54.580747  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:54.580749  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:54.580751  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:54.580754  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:54.580754  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:54.580756  5404 global_msg.cpp:380] angle : 10
+I1119 15:56:54.580763  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:54.580765  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:54.592604  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 3
+I1119 15:56:54.877477  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:56.035781  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 2
+I1119 15:56:56.192210  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:56.599233  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:56.599241  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:56.599243  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:56.599246  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:56.599247  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:56.599248  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:56.599251  5404 global_msg.cpp:380] angle : 10
+I1119 15:56:56.599254  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:56.599256  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:57.533334  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:56:57.609964  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:57.888687  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:56:58.616379  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:56:58.616391  5404 global_msg.cpp:375] vision state 1
+I1119 15:56:58.616394  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:56:58.616395  5404 global_msg.cpp:377] chassis status 1
+I1119 15:56:58.616397  5404 global_msg.cpp:378] localization status 0
+I1119 15:56:58.616400  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:56:58.616401  5404 global_msg.cpp:380] angle : 10
+I1119 15:56:58.616405  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:56:58.616406  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:56:58.974313  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:56:59.195365  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:57:00.307279  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:00.629681  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:00.629712  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:00.629715  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:00.629717  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:00.629719  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:00.629720  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:00.629722  5404 global_msg.cpp:380] angle : 10
+I1119 15:57:00.629731  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:00.629734  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:01.550400  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:57:01.865011  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:02.654942  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:02.655555  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:02.655561  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:02.655563  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:02.655565  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:02.655566  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:02.655568  5404 global_msg.cpp:380] angle : 10
+I1119 15:57:02.655572  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:02.655575  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:02.676682  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:57:03.393651  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:04.279350  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:57:04.669967  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:04.669984  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:04.669986  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:04.669988  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:04.669991  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:04.669992  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:04.669993  5404 global_msg.cpp:380] angle : 10
+I1119 15:57:04.670001  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:04.670002  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:04.799309  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:05.965308  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:57:06.177747  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:06.681344  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:06.681356  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:06.681360  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:06.681360  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:06.681362  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:06.681365  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:06.681366  5404 global_msg.cpp:380] angle : 10
+I1119 15:57:06.681372  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:06.681375  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:07.219475  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:57:07.536142  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:07.967794  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 2
+I1119 15:57:08.700764  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:08.700776  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:08.700778  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:08.700780  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:08.700783  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:08.700783  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:08.700785  5404 global_msg.cpp:380] angle : 10
+I1119 15:57:08.700794  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:08.700796  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:08.922438  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:09.660346  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 4
+I1119 15:57:10.236701  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:10.718843  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:10.718861  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:10.718863  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:10.718865  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:10.718866  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:10.718868  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:10.718870  5404 global_msg.cpp:380] angle : 10
+I1119 15:57:10.718888  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:10.718891  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:11.118471  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:57:11.624298  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:12.217499  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:57:12.730063  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:12.730110  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:12.730113  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:12.730114  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:12.730116  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:12.730118  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:12.730120  5404 global_msg.cpp:380] angle : 10
+I1119 15:57:12.730140  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:12.730142  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:12.998508  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:13.601897  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:57:14.327613  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:14.742055  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:14.742066  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:14.742069  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:14.742070  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:14.742071  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:14.742074  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:14.742075  5404 global_msg.cpp:380] angle : 10
+I1119 15:57:14.742079  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:14.742081  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:15.198343  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:57:15.715626  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:16.605335  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:57:16.761301  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:16.761330  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:16.761332  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:16.761334  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:16.761337  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:16.761338  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:16.761340  5404 global_msg.cpp:380] angle : 10
+I1119 15:57:16.761356  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:16.761358  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:17.114487  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:17.978307  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:57:18.434746  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:18.773483  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:18.773510  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:18.773514  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:18.773515  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:18.773516  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:18.773519  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:18.773520  5404 global_msg.cpp:380] angle : 10
+I1119 15:57:18.773531  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:18.773533  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:19.294979  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:57:19.810250  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:20.180832  5404 stereo_barrier_range_finder.cc:335] GetObstacles long interval! obstacles update after 6200ms
+I1119 15:57:20.784883  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:20.784909  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:20.784910  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:20.784912  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:20.784914  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:20.784916  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:20.784917  5404 global_msg.cpp:380] angle : 10
+I1119 15:57:20.784929  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:20.784930  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:20.920214  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:57:21.306460  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:22.428771  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:57:22.737815  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:22.797643  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:22.797652  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:22.797654  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:22.797657  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:22.797658  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:22.797659  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:22.797662  5404 global_msg.cpp:380] angle : 10
+I1119 15:57:22.797665  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:22.797667  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:24.046387  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:57:24.121888  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:24.809036  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:24.809062  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:24.809063  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:24.809065  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:24.809067  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:24.809069  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:24.809070  5404 global_msg.cpp:380] angle : 10
+I1119 15:57:24.809083  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:24.809085  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:25.435490  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:25.435534  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:57:26.820502  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:26.820523  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:26.820525  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:26.820528  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:26.820528  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:26.820530  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:26.820533  5404 global_msg.cpp:380] angle : 10
+I1119 15:57:26.820539  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:26.820541  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:26.821183  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:26.821198  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:57:28.180915  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:28.180941  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:57:28.391067  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:57:28.430438  5404 stereo_barrier_range_finder.cc:335] GetObstacles long interval! obstacles update after 4201ms
+I1119 15:57:28.832999  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:28.833015  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:28.833037  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:28.833039  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:28.833041  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:28.833043  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:28.833045  5404 global_msg.cpp:380] angle : 9.93
+I1119 15:57:28.833050  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:28.833051  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:29.549445  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:29.849706  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:57:30.850466  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:30.850478  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:30.850481  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:30.850482  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:30.850483  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:30.850486  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:30.850487  5404 global_msg.cpp:380] angle : 9.33
+I1119 15:57:30.850492  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:30.850493  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:30.951035  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:31.018206  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:57:32.245553  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:32.321624  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:57:32.865491  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:32.867044  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:32.867050  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:32.867051  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:32.867053  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:32.867055  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:32.867058  5404 global_msg.cpp:380] angle : 7.83
+I1119 15:57:32.867060  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:32.867063  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:33.634057  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:33.786588  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:57:34.879344  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:34.879357  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:34.879359  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:34.879361  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:34.879364  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:34.879365  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:34.879366  5404 global_msg.cpp:380] angle : 6.15
+I1119 15:57:34.879371  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:34.879374  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:35.002861  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:36.351375  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:36.351425  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 3
+I1119 15:57:36.896842  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:36.896862  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:36.896863  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:36.896865  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:36.896867  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:36.896869  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:36.896870  5404 global_msg.cpp:380] angle : 5.04
+I1119 15:57:36.896875  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:36.896878  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:37.182516  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:57:37.749306  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:37.821941  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 5
+I1119 15:57:38.912294  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:38.912314  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:38.912317  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:38.912318  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:38.912319  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:38.912322  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:38.912323  5404 global_msg.cpp:380] angle : 3.79
+I1119 15:57:38.912328  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:38.912328  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:39.126116  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:39.274302  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 4
+I1119 15:57:40.615535  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:40.910913  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 3
+I1119 15:57:40.929946  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:40.929988  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:40.929991  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:40.929992  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:40.929994  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:40.929996  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:40.929997  5404 global_msg.cpp:380] angle : 2.01
+I1119 15:57:40.930050  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:40.930053  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:42.029142  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:42.390909  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 3
+I1119 15:57:42.950892  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:42.950906  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:42.950907  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:42.950909  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:42.950911  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:42.950912  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:42.950914  5404 global_msg.cpp:380] angle : 0.42
+I1119 15:57:42.950918  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:42.950920  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:43.350121  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:43.864370  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:57:44.756918  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:44.968173  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:44.968371  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:44.968377  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:44.968380  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:44.968381  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:44.968384  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:44.968385  5404 global_msg.cpp:380] angle : 0
+I1119 15:57:44.968405  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:44.968407  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:45.336932  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:57:46.151788  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:46.802999  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:57:46.979960  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:46.979995  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:46.979997  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:46.979998  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:46.980000  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:46.980005  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:46.980006  5404 global_msg.cpp:380] angle : 0
+I1119 15:57:46.980015  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:46.980018  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:47.466934  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:48.277637  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:57:48.873345  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:48.991854  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:48.991864  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:48.991868  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:48.991869  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:48.991870  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:48.991873  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:48.991874  5404 global_msg.cpp:380] angle : 0
+I1119 15:57:48.991878  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:48.991879  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:49.714884  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:57:50.185125  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:51.004746  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:51.004778  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:51.004781  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:51.004783  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:51.004784  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:51.004786  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:51.004788  5404 global_msg.cpp:380] angle : 0
+I1119 15:57:51.004792  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:51.004794  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:51.205152  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:57:51.554998  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:52.633653  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:57:52.929625  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:53.015836  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:53.015866  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:53.015869  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:53.015872  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:53.015873  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:53.015875  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:53.015877  5404 global_msg.cpp:380] angle : 0
+I1119 15:57:53.015887  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:53.015887  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:54.116444  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:57:54.262478  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:55.030236  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:55.030279  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:55.030282  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:55.030284  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:55.030287  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:55.030288  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:55.030289  5404 global_msg.cpp:380] angle : 0
+I1119 15:57:55.030308  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:55.030309  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:55.562683  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:57:55.637060  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:57.041894  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:57.041923  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:57.041925  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:57.041927  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:57.041929  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:57.041931  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:57.041934  5404 global_msg.cpp:380] angle : 0
+I1119 15:57:57.041946  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:57.041949  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:57.048559  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:57.048629  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:57:57.186465  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:57:58.353567  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:57:58.493918  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:57:59.052352  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:57:59.052389  5404 global_msg.cpp:375] vision state 1
+I1119 15:57:59.052392  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:57:59.052393  5404 global_msg.cpp:377] chassis status 1
+I1119 15:57:59.052443  5404 global_msg.cpp:378] localization status 0
+I1119 15:57:59.052446  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:57:59.052448  5404 global_msg.cpp:380] angle : 0
+I1119 15:57:59.052456  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:57:59.052459  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:57:59.784242  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:00.000126  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 2
+I1119 15:58:01.066877  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:58:01.066905  5404 global_msg.cpp:375] vision state 1
+I1119 15:58:01.066907  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:58:01.066908  5404 global_msg.cpp:377] chassis status 1
+I1119 15:58:01.066910  5404 global_msg.cpp:378] localization status 0
+I1119 15:58:01.066912  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:58:01.066915  5404 global_msg.cpp:380] angle : 0.39
+I1119 15:58:01.066917  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:58:01.066920  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:58:01.187971  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:01.490378  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 3
+I1119 15:58:02.535138  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:02.967412  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 5
+I1119 15:58:03.092331  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:58:03.092342  5404 global_msg.cpp:375] vision state 1
+I1119 15:58:03.092344  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:58:03.092346  5404 global_msg.cpp:377] chassis status 1
+I1119 15:58:03.092348  5404 global_msg.cpp:378] localization status 0
+I1119 15:58:03.092350  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:58:03.092352  5404 global_msg.cpp:380] angle : 2.85
+I1119 15:58:03.092358  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:58:03.092360  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:58:03.942549  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:04.459899  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 2
+I1119 15:58:05.108654  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:58:05.108666  5404 global_msg.cpp:375] vision state 1
+I1119 15:58:05.108669  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:58:05.108670  5404 global_msg.cpp:377] chassis status 1
+I1119 15:58:05.108672  5404 global_msg.cpp:378] localization status 0
+I1119 15:58:05.108675  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:58:05.108676  5404 global_msg.cpp:380] angle : 2.98
+I1119 15:58:05.108683  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:58:05.108685  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:58:05.306393  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:05.997030  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 3
+I1119 15:58:06.715335  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:07.121273  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:58:07.121286  5404 global_msg.cpp:375] vision state 1
+I1119 15:58:07.121289  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:58:07.121290  5404 global_msg.cpp:377] chassis status 1
+I1119 15:58:07.121291  5404 global_msg.cpp:378] localization status 0
+I1119 15:58:07.121294  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:58:07.121295  5404 global_msg.cpp:380] angle : 3.13
+I1119 15:58:07.121300  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:58:07.121302  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:58:07.460924  5398 stereo_barrier_range_finder.cc:150] stereo msg: polygons_size: 0, deeplearning_rects: 1
+I1119 15:58:08.110838  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:08.489473  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:09.136752  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:58:09.136785  5404 global_msg.cpp:375] vision state 1
+I1119 15:58:09.136788  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:58:09.136790  5404 global_msg.cpp:377] chassis status 1
+I1119 15:58:09.136791  5404 global_msg.cpp:378] localization status 0
+I1119 15:58:09.136793  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:58:09.136795  5404 global_msg.cpp:380] angle : 3.3
+I1119 15:58:09.136808  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:58:09.136811  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:58:09.422894  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:09.849141  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:10.780241  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:11.151639  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:58:11.151655  5404 global_msg.cpp:375] vision state 1
+I1119 15:58:11.151659  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:58:11.151659  5404 global_msg.cpp:377] chassis status 1
+I1119 15:58:11.151661  5404 global_msg.cpp:378] localization status 0
+I1119 15:58:11.151664  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:58:11.151664  5404 global_msg.cpp:380] angle : 2.72
+I1119 15:58:11.151698  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:58:11.151701  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:58:11.193449  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:12.133621  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:12.482988  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:13.161784  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:58:13.161801  5404 global_msg.cpp:375] vision state 1
+I1119 15:58:13.161804  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:58:13.161805  5404 global_msg.cpp:377] chassis status 1
+I1119 15:58:13.161808  5404 global_msg.cpp:378] localization status 0
+I1119 15:58:13.161809  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:58:13.161811  5404 global_msg.cpp:380] angle : 1.26
+I1119 15:58:13.161819  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:58:13.161821  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:58:13.408921  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:13.843847  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:14.777230  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:15.173085  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:58:15.173111  5404 global_msg.cpp:375] vision state 1
+I1119 15:58:15.173115  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:58:15.173116  5404 global_msg.cpp:377] chassis status 1
+I1119 15:58:15.173117  5404 global_msg.cpp:378] localization status 0
+I1119 15:58:15.173120  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:58:15.173121  5404 global_msg.cpp:380] angle : 0.54
+I1119 15:58:15.173125  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:58:15.173126  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:58:15.191087  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:16.149411  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:16.521174  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:17.185775  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:58:17.185804  5404 global_msg.cpp:375] vision state 1
+I1119 15:58:17.185806  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:58:17.185808  5404 global_msg.cpp:377] chassis status 1
+I1119 15:58:17.185811  5404 global_msg.cpp:378] localization status 0
+I1119 15:58:17.185812  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:58:17.185814  5404 global_msg.cpp:380] angle : 0.27
+I1119 15:58:17.185819  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:58:17.185820  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:58:17.461861  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:17.878793  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:18.813110  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:19.194492  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:19.197546  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:58:19.197556  5404 global_msg.cpp:375] vision state 1
+I1119 15:58:19.197557  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:58:19.197559  5404 global_msg.cpp:377] chassis status 1
+I1119 15:58:19.197561  5404 global_msg.cpp:378] localization status 0
+I1119 15:58:19.197562  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:58:19.197564  5404 global_msg.cpp:380] angle : 0
+I1119 15:58:19.197568  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:58:19.197571  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:58:20.168290  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:20.538014  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:21.209802  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:58:21.209836  5404 global_msg.cpp:375] vision state 1
+I1119 15:58:21.209838  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:58:21.209841  5404 global_msg.cpp:377] chassis status 1
+I1119 15:58:21.209842  5404 global_msg.cpp:378] localization status 0
+I1119 15:58:21.209846  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:58:21.209847  5404 global_msg.cpp:380] angle : 0
+I1119 15:58:21.209870  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:58:21.209872  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:58:21.489742  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:21.906599  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:22.837014  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:23.206930  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:23.222126  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:58:23.222155  5404 global_msg.cpp:375] vision state 1
+I1119 15:58:23.222157  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:58:23.222159  5404 global_msg.cpp:377] chassis status 1
+I1119 15:58:23.222162  5404 global_msg.cpp:378] localization status 0
+I1119 15:58:23.222162  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:58:23.222164  5404 global_msg.cpp:380] angle : 0
+I1119 15:58:23.222170  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:58:23.222172  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:58:24.195060  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:24.575242  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:25.236132  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:58:25.236158  5404 global_msg.cpp:375] vision state 1
+I1119 15:58:25.236160  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:58:25.236162  5404 global_msg.cpp:377] chassis status 1
+I1119 15:58:25.236164  5404 global_msg.cpp:378] localization status 0
+I1119 15:58:25.236166  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:58:25.236167  5404 global_msg.cpp:380] angle : 0
+I1119 15:58:25.236178  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:58:25.236181  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:58:25.511878  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:25.938491  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:26.872445  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:27.241358  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:27.249045  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:58:27.249065  5404 global_msg.cpp:375] vision state 1
+I1119 15:58:27.249068  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:58:27.249069  5404 global_msg.cpp:377] chassis status 1
+I1119 15:58:27.249071  5404 global_msg.cpp:378] localization status 0
+I1119 15:58:27.249073  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:58:27.249074  5404 global_msg.cpp:380] angle : 0
+I1119 15:58:27.249085  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:58:27.249086  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:58:28.195508  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:28.590500  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:29.261368  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:58:29.261376  5404 global_msg.cpp:375] vision state 1
+I1119 15:58:29.261379  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:58:29.261380  5404 global_msg.cpp:377] chassis status 1
+I1119 15:58:29.261382  5404 global_msg.cpp:378] localization status 0
+I1119 15:58:29.261384  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:58:29.261386  5404 global_msg.cpp:380] angle : 0
+I1119 15:58:29.261404  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:58:29.261407  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:58:29.484804  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:29.932126  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:30.841501  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:31.214025  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:31.272001  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:58:31.272022  5404 global_msg.cpp:375] vision state 1
+I1119 15:58:31.272025  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:58:31.272027  5404 global_msg.cpp:377] chassis status 1
+I1119 15:58:31.272028  5404 global_msg.cpp:378] localization status 0
+I1119 15:58:31.272030  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:58:31.272032  5404 global_msg.cpp:380] angle : 0
+I1119 15:58:31.272040  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:58:31.272042  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:58:32.196189  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:32.586143  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:33.286231  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:58:33.286870  5404 global_msg.cpp:375] vision state 1
+I1119 15:58:33.286878  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:58:33.286880  5404 global_msg.cpp:377] chassis status 1
+I1119 15:58:33.286882  5404 global_msg.cpp:378] localization status 0
+I1119 15:58:33.286885  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:58:33.286885  5404 global_msg.cpp:380] angle : 0
+I1119 15:58:33.286893  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:58:33.286895  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:58:33.492158  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:33.930546  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:34.861851  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:35.205715  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:35.299971  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:58:35.299993  5404 global_msg.cpp:375] vision state 1
+I1119 15:58:35.299995  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:58:35.299998  5404 global_msg.cpp:377] chassis status 1
+I1119 15:58:35.299999  5404 global_msg.cpp:378] localization status 0
+I1119 15:58:35.300001  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:58:35.300004  5404 global_msg.cpp:380] angle : 0
+I1119 15:58:35.300009  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:58:35.300010  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:58:36.353116  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:36.784086  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:37.313266  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:58:37.313297  5404 global_msg.cpp:375] vision state 1
+I1119 15:58:37.313298  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:58:37.313300  5404 global_msg.cpp:377] chassis status 1
+I1119 15:58:37.313302  5404 global_msg.cpp:378] localization status 0
+I1119 15:58:37.313304  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:58:37.313306  5404 global_msg.cpp:380] angle : 0
+I1119 15:58:37.313313  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:58:37.313314  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:58:37.734459  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:38.150543  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:39.105911  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:39.333052  5404 global_msg.cpp:374]  =================== self check =================== 
+I1119 15:58:39.333070  5404 global_msg.cpp:375] vision state 1
+I1119 15:58:39.333072  5404 global_msg.cpp:376] radar_sonar 1
+I1119 15:58:39.333073  5404 global_msg.cpp:377] chassis status 1
+I1119 15:58:39.333076  5404 global_msg.cpp:378] localization status 0
+I1119 15:58:39.333077  5404 global_msg.cpp:379] autonomous_mode : 0
+I1119 15:58:39.333079  5404 global_msg.cpp:380] angle : 0
+I1119 15:58:39.333082  5404 global_msg.cpp:381] gear_position : 0
+I1119 15:58:39.333084  5404 global_msg.cpp:382] remaining_battery : 0
+I1119 15:58:39.463650  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:40.405771  5398 stereo_barrier_range_finder.cc:130] stereo msg: obstacle info received
+I1119 15:58:40.759220  5369 dragonfly_pod_controller.cpp:685] closing planning service, please wait...
+I1119 15:58:40.759415  5369 dragonfly_pod_controller.cpp:692] planning service closed
+I1119 15:58:41.198591  5398 stereo_barrier_range_finder.cc:145] stereo msg: heartbeat package
+I1119 15:58:41.876025  5404 chassis_planner.cpp:59] set driving mode ok 1
+I1119 15:58:41.876061  5404 chassis_planner.cpp:446] StopCar Begin
+I1119 15:58:43.413350  5404 chassis_planner.cpp:485] StopCar end
+E1119 15:58:43.413532  5369 fusion_multi_sensors.cc:182] [perception] FusionMultiSensorObstacles::Impl Destructed!
+E1119 15:58:43.496650  5369 radar_barrier_range_finder.cc:1230] [perception] RadarBarrierRangeFinder Destructed!
+E1119 15:58:43.501364  5369 radar_barrier_range_finder.cc:377] [perception] RadarBarrierRangeFinder::Impl Destructed!
+E1119 15:58:43.506075  5369 radar_barrier_range_finder.cc:396] [perception] radar : Exit DataProcessLoop thread
+E1119 15:58:44.010902  5369 sonar_barrier_range_finder.cc:556] [perception] SonarBarrierRangeFinder Destructed!
+E1119 15:58:44.015275  5369 sonar_barrier_range_finder.cc:147] [perception] SonarBarrierRangeFinder::Impl Destructed!
+E1119 15:58:44.019835  5369 sonar_barrier_range_finder.cc:164] [perception] sonar : Exit DataProcessLoop thread
+I1119 15:58:44.709467  5387 can_obj.cpp:328] Chassis heart beat thread ends.
+I1119 15:58:44.842479  5386 VCU.cpp:123] VCU send thread ends.
+I1119 15:58:44.843353  5385 can_transmitter.cpp:270] Receive data thread ends.
+I1119 15:58:44.874423  5369 can_transmitter.cpp:116] Can device closed.
+I1119 15:58:44.874450  5369 can_obj.cpp:115] CanObj destructed.

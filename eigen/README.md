@@ -100,8 +100,13 @@ B:
 
 3D空间中的变换：
 
-
 ## 四元数转欧拉角
+
+两个不错的在线转换工具：
+
+https://www.andre-gaschler.com/rotationconverter/
+
+https://quaternions.online/
 
 
 变换类型|说明

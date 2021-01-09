@@ -87,6 +87,12 @@ int main(int argc, char *argv[]) {
   printf("min_int32_t: %d, max_int32_t: %d\n", MIN_OF(int32_t), MAX_OF(int32_t));
 **/
 
+  std::string tmp_str = "d8:12:65:65:08:7d-H001";
+  std::string delimiter = "-";
+  std::string decrypt_mac_addr = tmp_str.substr(0, tmp_str.find(delimiter));
+  std::string decrypt_car_name = tmp_str.substr(tmp_str.find(delimiter)+delimiter.length());
+  std::cout << "decrypt_mac_addr: " << decrypt_mac_addr << ", decrypt_car_name: " << decrypt_car_name << std::endl;
+
   std::string s1 = "0051";
   std::string s2 =  "00 01 00 00 00 00 00 00 ";
   printf("s1.size: %ld, s2.size: %ld\n", s1.size(), s2.size());

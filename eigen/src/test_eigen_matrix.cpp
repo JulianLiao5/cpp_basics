@@ -179,15 +179,15 @@ int main(int argc, char** argv) {
     Vector3d zzz_pose_in_radar1 = POD4_T_veh_radar1.colPivHouseholderQr().solve(zzz_pose_in_veh);
     double zzz_tmp_Azimuth = atan2(-zzz_pose_in_radar1[1], zzz_pose_in_radar1[0]) * 180 / M_PI;
     double zzz_tmp_Range = zzz_pose_in_radar1[0] / cos(zzz_tmp_Azimuth * M_PI / 180);
-    cout << "\nzzzzzzzzzzzzzzzzzz zzz_tmp_Range: " << zzz_tmp_Range << ", zzz_tmp_Azimuth: " << zzz_tmp_Azimuth << "\n";
+    cout << "\n[POD4(20210109) | radar - 1] Range: " << zzz_tmp_Range << ", Azimuth: " << zzz_tmp_Azimuth << "\n";
 
 
     Vector3d yyy_pose_in_veh;
-    yyy_pose_in_veh << 3.31734,0.600448,1;
+    yyy_pose_in_veh << 3.41475,1.02818,1;
     Vector3d yyy_pose_in_radar5 = POD4_T_veh_radar5.colPivHouseholderQr().solve(yyy_pose_in_veh);
     double yyy_tmp_Azimuth = atan2(-yyy_pose_in_radar5[1], yyy_pose_in_radar5[0]) * 180 / M_PI;
     double yyy_tmp_Range = yyy_pose_in_radar5[0] / cos(yyy_tmp_Azimuth * M_PI / 180);
-    cout << "\nyyyyyyyyyyyyyyy yyy_tmp_Range: " << yyy_tmp_Range << ", yyy_tmp_Azimuth: " << yyy_tmp_Azimuth << "\n";
+    cout << "\n[POD4(20210109) | radar - 5] Range: " << setprecision(2) << fixed << yyy_tmp_Range << ", Azimuth: " << setprecision(2) << fixed << yyy_tmp_Azimuth << "\n";
 
 
 
@@ -227,11 +227,11 @@ int main(int argc, char** argv) {
                            -0.656059,  0.754710, -0.745000,
                             0.000000,  0.000000,  1.000000;
     Vector3d tmp_pose_in_veh;
-    tmp_pose_in_veh << 4.14043, -1.00864, 1;
+    tmp_pose_in_veh << 12.5334, -6.85466, 1;
     Vector3d pose_in_radar1 = S12_T_vehicle_radar1.colPivHouseholderQr().solve(tmp_pose_in_veh);
     double tmp_Azimuth = atan2(-pose_in_radar1[1], pose_in_radar1[0]) * 180 / M_PI;
     double tmp_Range = pose_in_radar1[0] / cos(tmp_Azimuth * M_PI / 180);
-    cout << "\ncurcur -- tmp_Range: " << tmp_Range << ", tmp_Azimuth: " << tmp_Azimuth << " --curcur--\n";
+    cout << "Line" << __LINE__ << " | curcur -- tmp_Range: " << tmp_Range << ", tmp_Azimuth: " << tmp_Azimuth << " --curcur--\n";
 
     Matrix3d S12_T_vehicle_radar2;
     S12_T_vehicle_radar2 << 0.829038, -0.559193,  2.980000,

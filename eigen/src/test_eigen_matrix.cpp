@@ -191,6 +191,31 @@ int main(int argc, char** argv) {
 
 
 
+    Vector3d S12_pose_in_veh;
+    Vector3d S12_pose_in_radar;
+    double S12_Azimuth = 0.0;
+    double S12_Range = 0.0;
+
+    Matrix3d S12_T_veh_radar0;
+    S12_T_veh_radar0 << 1, 0,  3.186,
+                        0,  1,  0,
+                        0.000000,  0.000000,  1.000000;
+    S12_pose_in_veh << 3.7201,-0.512186,1;
+    S12_pose_in_radar = S12_T_veh_radar0.colPivHouseholderQr().solve(S12_pose_in_veh);
+    S12_Azimuth = atan2(-S12_pose_in_radar[1], S12_pose_in_radar[0]) * 180 / M_PI;
+    S12_Range = S12_pose_in_radar[0] / cos(S12_Azimuth * M_PI / 180);
+    cout << "\n[S12(20210112) | radar - 0] Range: " << S12_Range << ", Azimuth: " << S12_Azimuth << "\n";
+
+    Matrix3d S12_T_veh_radar2;
+    S12_T_veh_radar2 << 0.829038, -0.559193,  2.98,
+                        0.559193,  0.829038,  0.745,
+                        0.000000,  0.000000,  1.000000;
+    S12_pose_in_veh << 8.25842,0.874001,1;
+    S12_pose_in_radar = S12_T_veh_radar2.colPivHouseholderQr().solve(S12_pose_in_veh);
+    S12_Azimuth = atan2(-S12_pose_in_radar[1], S12_pose_in_radar[0]) * 180 / M_PI;
+    S12_Range = S12_pose_in_radar[0] / cos(S12_Azimuth * M_PI / 180);
+    cout << "\n[S12(20210111) | radar - 2] Range: " << S12_Range << ", Azimuth: " << S12_Azimuth << "\n";
+
     Matrix3d S12_T_veh_sonar1;
     S12_T_veh_sonar1 << 1.000000,  0.000000,  3.120000,
                         0.000000,  1.000000, -0.428000,

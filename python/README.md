@@ -52,11 +52,13 @@ https://regex101.com/
 
 1. 打印lineno
 
+```
 import inspect
 
 def lineno():
     """Returns the current line number in program."""
     return str(inspect.currentframe().f_back.f_lineno) + "  "
+```
 
 2. 写csv文件
 

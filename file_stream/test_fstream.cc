@@ -30,8 +30,5 @@ int main(int argc, char *argv[]) {
     LOG(INFO) << "len: " << len;
     LOG(INFO) << calib_str << "1111111111111111111";
 
-    google::protobuf::TextFormat::ParseFromString(calib_str, );
-
-
     return 0;
 }

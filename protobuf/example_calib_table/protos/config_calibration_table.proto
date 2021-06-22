@@ -1,0 +1,29 @@
+// Copyright 2020 Allride.ai. All Rights Reserved.
+// Author: Wenshuai Wang (wenshuai.Wang@allride.ai)
+
+syntax = "proto3";
+
+package piauto.chassis;
+
+option go_package = "piauto/chassis/config_calibration_table";
+option java_package = "piauto.chassis";
+option java_outer_classname = "CalibrationTableConfig";
+option java_multiple_files = false;
+
+message AccelerationPid {
+  CalibrationTable calibration_table = 1;
+}
+
+message CalibrationTable {
+  repeated CalibrationInfo calibration_info = 1;
+}
+
+message CalibrationInfo {
+  double speed = 1;
+  repeated TwoDimensionScatter scatter = 2;
+}
+
+message TwoDimensionScatter {
+  double acceleration = 1;
+  double longitudinal = 2;
+}

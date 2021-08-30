@@ -6,6 +6,9 @@
 #include "testA.h"
 
 int main(int argc, char **argv) {
+
+  std::cout << "***********__GNUC__: " << __GNUC__ << "\n";
+
   int local_type = 2;
   std::shared_ptr<TestA> testA = std::make_shared<TestA>(local_type);
 
